@@ -1,0 +1,997 @@
+.team_list {
+	width: 546px;
+	height: auto;
+	padding: 0 20px;
+	overflow: hidden;
+	background: transparent;
+}
+.team_list_auto_w {
+	height: auto;
+	padding: 0;
+	overflow: hidden;
+	background: transparent;
+}
+.team_list h2 {
+	height: 20px;
+	line-height: 20px;
+	margin: 10px 0 0 0;
+	padding-left: 8px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #333;
+}
+.team_list_auto_w h2 {
+	height: 20px;
+	line-height: 20px;
+	margin: 10px 0 0 0;
+	font-size: 12px;
+	font-weight: bold;
+	color: #333;
+}
+.team_con {
+	position: relative;
+	float: left;
+	height: auto;
+}
+.denglu_con {
+	height: auto;
+	overflow: hidden;
+}
+.team_list .team_left1, .team_left2, .team_right1, .team_right2 {
+	width: 10px;
+	height: 19px;
+	background: url(../images/team_btn.gif) no-repeat;
+	overflow: hidden;
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+}
+.team_left1, .team_left2 {
+	left: -10px;
+}
+.team_right1, .team_right2 {
+	right: -10px;
+}
+.team_left1 {
+	background-position: 0 0;
+	float: left;
+}
+.team_left2 {
+	background-position: 0 -19px;
+	float: left;
+}
+.team_right1 {
+	background-position: 0 -38px;
+	float: right;
+}
+.team_right2 {
+	background-position: 0 -57px;
+	float: right;
+}
+.teamcon {
+	margin: 4px 0 0 8px;
+}
+.team_list_auto_w .teamcon {
+	margin: 4px 0 0 0;
+}
+.denglu_con ul {
+	margin: 0;
+	float: left;
+}
+.denglu_con li {
+	float: left;
+	padding: 2px 10px 2px 0;
+}
+.denglu_con li img, .denglu_con li span {
+	cursor: pointer;
+}
+#mediashow3 ul li {
+	float: left;
+	padding: 2px 10px 2px 0;
+}
+#mediashow3 ul li img {
+	margin-right: 4px;
+	float: left;
+}
+#mediashow3 ul li span {
+	width: 48px;
+	display: block;
+	float: left;
+}
+#mediashow4 ul li {
+	padding: 0 4px 4px 0;
+}
+#mediashow5 ul li {
+	height: 18px;
+	margin-bottom: 10px;
+}
+#mediashow5 li a {
+	color: #000000;
+	display: block;
+	height: 18px;
+	padding-left: 18px;
+	width: 50px;
+}
+#mediashow5 ul li span {
+	display: block;
+	float: left;
+	width: 48px;
+}
+#nWidgetDiv7 .denglu_con ul li, .team_list_auto_w .denglu_con ul li, .team_list_middle .denglu_con ul li {
+	padding: 0 4px 4px 0;
+}
+.team_list_auto_w .denglu_con ul li {
+	height: 27px;
+}
+.denglu_con li .denglu_ico {
+	display: block;
+	height: 30px;
+	text-indent: -999em;
+	width: 120px;
+}
+.denglu_renren, .denglu_sina, .denglu_tencent, .denglu_netease, .denglu_sohu, .denglu_windowslive, .denglu_360, .denglu_shengda, .denglu_kaixin001, .denglu_douban, .denglu_google, .denglu_51, .denglu_qzone, .denglu_alipay, .denglu_alipayquick, .denglu_tenpay, .denglu_taobao, .denglu_yahoo, .denglu_tianya, .denglu_baidu, .denglu_kaixin001open, .denglu_netease163, .denglu_guard360, .denglu_tianyi, .denglu_facebook, .denglu_twitter {
+	background: url(../images/denglu_all_bg.gif) no-repeat scroll 0 0 transparent;
+}
+.denglu_renren {
+	background-position: -350px 0;
+}
+.denglu_sina {
+	background-position: -350px -30px;
+}
+.denglu_tencent {
+	background-position: -350px -60px;
+}
+.denglu_netease {
+	background-position: -350px -90px;
+}
+.denglu_sohu {
+	background-position: -350px -120px;
+}
+.denglu_windowslive {
+	background-position: -350px -150px;
+}
+.denglu_360 {
+	background-position: -350px -180px;
+}
+.denglu_shengda {
+	background-position: -350px -210px;
+}
+.denglu_kaixin001 {
+	background-position: -350px -240px;
+}
+.denglu_kaixin001open {
+	background-position: -350px -240px;
+}
+.denglu_douban {
+	background-position: -350px -270px;
+}
+.denglu_google {
+	background-position: -350px -300px;
+}
+.denglu_51 {
+	background-position: -350px -330px;
+}
+.denglu_qzone {
+	background-position: -350px -360px;
+}
+.denglu_alipay {
+	background-position: -350px -390px;
+}
+.denglu_tenpay {
+	background-position: -350px -420px;
+}
+.denglu_taobao {
+	background-position: -350px -450px;
+}
+.denglu_yahoo {
+	background-position: -350px -480px;
+}
+.denglu_tianya {
+	background-position: -350px -510px;
+}
+.denglu_baidu {
+	background-position: -350px -570px;
+}
+.denglu_alipayquick {
+	background-position: -350px -540px;
+}
+.denglu_netease163 {
+	background-position: -350px -600px;
+}
+.denglu_guard360 {
+	background-position: -350px -630px;
+}
+.denglu_tianyi {
+	background-position: -350px -660px;
+}
+.denglu_facebook {
+	background-position: -350px -690px;
+}
+.denglu_twitter {
+	background-position: -350px -720px;
+}
+.team_list p {
+	width: 510px;
+	height: 22px;
+	line-height: 22px;
+	color: #0092cd;
+	float: left;
+	word-spacing: 2px;
+	margin: 4px 0 2px 0;
+}
+.team_list p strong {
+	float: left;
+	margin-left: 8px;
+	display: none;
+}
+.team_list p span {
+	color: #333;
+	float: right;
+}
+.team_list p label {
+	color: #333;
+}
+.team_list p label b {
+	color: #333;
+}
+.team_list p label b a {
+	color: #333;
+	font-weight: bold;
+}
+.team_list p label b a:hover {
+	color: #333;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.team_list p label em {
+	color: #f22222;
+	font-weight: normal;
+}
+.team_list p a {
+	color: #0092cd;
+}
+.pop_team {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 5px solid #c7c7c7;
+	height: auto;
+	width: 572px;
+	z-index: 2;
+}
+.dl_block {
+	background: #000;
+	opacity: 0.4;
+	filter: alpha('opacity:40');
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.succeed {
+	width: 610px;
+	height: auto;
+	border: 1px solid #dadada;
+}
+.succeed h2 {
+	height: 32px;
+	line-height: 32px;
+	font-size: 12px;
+	background: url(../images/succeed_h.gif) repeat-x top left;
+	text-align: center;
+}
+.succeed_con {
+	padding: 19px 0 0 14px;
+}
+.succeed_con_t {
+	height: 69px;
+}
+.succeed_con_t img {
+	width: 180px;
+	height: 45px;
+	border: 1px solid #a9a9a9;
+	float: left;
+	overflow: hidden;
+	margin-right: 12px;
+}
+.succeed_con_t h3 {
+	color: #828282;
+	font-size: 14px;
+}
+.succeed_con_t p {
+	color: #585858;
+	font-size: 12px;
+}
+.succeed_name {
+	height: 24px;
+	line-height: 24px;
+	color: #4b4b4b;
+}
+.succeed_txt {
+	width: 220px;
+	height: 22px;
+	line-height: 22px;
+	color: #828282;
+	border: 1px solid #828282;
+	padding-left: 4px;
+	margin: 0 10px;
+}
+.succeed_name span {
+	color: #c60000;
+}
+.succeed_con_f {
+	padding: 10px 0 30px 66px;
+}
+.register_btn, .succeed_con_f input {
+	width: 75px;
+	height: 26px;
+	margin-right: 16px;
+	background: url(../images/succeed_f_btn.gif) no-repeat;
+	border: none;
+	font-weight: bold;
+	color: #535353;
+	word-spacing: 4px;
+}
+.succeed_con_f p {
+	width: 516px;
+	margin-top: 18px;
+	color: #c60000;
+}
+.pop {
+	width: 392px;
+	height: auto;
+	padding-left: 8px;
+	border: 6px solid #8d8d8d;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	background: #fff;
+}
+.pop h2 {
+	height: 26px;
+	line-height: 26px;
+	font-size: 14px;
+	color: #333;
+	font-weight: normal;
+}
+.popcon {
+	margin-left: 18px;
+}
+.pop ul {
+	width: auto;
+	height: auto;
+	float: left;
+}
+.pop ul li {
+	padding: 10px 6px 0 0;
+	float: left;
+}
+.pop p, .pop_team3 p {
+	width: 392px;
+	height: 22px;
+	line-height: 22px;
+	color: #0092cd;
+	margin-top: 4px;
+	float: left;
+	word-spacing: 2px;
+	padding: 0;
+}
+.pop p strong, .pop_team3 p strong {
+	float: left;
+}
+.pop p span, .pop_team3 p span {
+	color: #333;
+	float: right;
+	padding-right: 8px;
+}
+.pop p a, .pop_team3 p a {
+	color: #0092cd;
+}
+.popb p {
+	width: 311px;
+}
+.team_list2 {
+	width: 148px;
+}
+.team_list2 p {
+	height: 24px;
+	line-height: 24px;
+	color: #333;
+	border: 1px solid #9c9c9c;
+	cursor: pointer;
+	padding: 0;
+	background: url(../images/team2_btn.png) no-repeat 128px 2px;
+}
+.team_list2 img {
+	margin: 0 3px;
+	position: relative;
+	top: 3px;
+}
+.team_list2 ul {
+	border: 1px solid #9c9c9c;
+	border-top: none;
+}
+.team_list2 li {
+	height: 24px;
+	line-height: 24px;
+	color: #333;
+	cursor: pointer;
+}
+.team_list2 li:hover {
+	background: #dbf3fc;
+}
+.pop2 {
+	border: none;
+	background: #fff;
+}
+.pops {
+	padding-left: 28px;
+}
+.team_list3 {
+	width: 520px;
+	height: auto;
+	padding: 0 6px;
+	overflow: hidden;
+	position: relative;
+	background: #fff;
+}
+.team_list3 h2 {
+	height: 35px;
+	line-height: 20px;
+	font-size: 12px;
+	padding: 4px 0;
+}
+.team_list3 ul {
+	clear: both;
+	padding-left: 10px;
+}
+.team_list3 ul li {
+	height: 30px;
+	padding-right: 8px;
+	word-spacing: 6px;
+	float: left;
+}
+.team_list3 img {
+	position: relative;
+	top: 4px;
+	margin-right: 3px;
+}
+.pop_team3 {
+	background: #fff;
+	border: 5px solid #707070;
+	border-radius: 10px;
+	height: auto;
+	width: 520px;
+	z-index: 2;
+	position: relative;
+}
+.team_list3 p {
+	width: 422px;
+	height: 22px;
+	line-height: 22px;
+	color: #0092cd;
+	margin-top: 4px;
+	float: left;
+	word-spacing: 2px;
+	padding: 0;
+}
+.pop_team3 p {
+	padding: 0;
+	padding-left: 14px;
+}
+.pop_team3 p strong, .team_list3 p strong {
+	float: left;
+}
+.pop_team3 p span, .team_list3 p span {
+	color: #333;
+	float: right;
+	padding-right: 8px;
+}
+.pop_team3 p a, .team_list3 p a {
+	color: #0092cd;
+}
+#mediashow0 li a {
+	display: block;
+	height: 35px;
+	width: 91px;
+}
+#mediashow1 li a {
+	width: 120px;
+	height: 30px;
+	display: block;
+}
+#mediashow3 li a {
+	display: block;
+	height: 50px;
+	width: 50px;
+}
+.denglu_con li .denglu_icon1 {
+	width: 91px;
+	height: 35px;
+	text-indent: -999em;
+	display: block;
+}
+.denglu_icon1_renren, .denglu_icon1_sina, .denglu_icon1_tencent, .denglu_icon1_netease, .denglu_icon1_sohu, .denglu_icon1_windowslive, .denglu_icon1_360, .denglu_icon1_shengda, .denglu_icon1_kaixin001, .denglu_icon1_douban, .denglu_icon1_google, .denglu_icon1_51, .denglu_icon1_qzone, .denglu_icon1_alipay, .denglu_icon1_alipayquick, .denglu_icon1_tenpay, .denglu_icon1_taobao, .denglu_icon1_yahoo, .denglu_icon1_tianya, .denglu_icon1_baidu, .denglu_icon1_kaixin001open, .denglu_icon1_netease163, .denglu_icon1_guard360, .denglu_icon1_tianyi, .denglu_icon1_facebook, .denglu_icon1_twitter {
+	background: url(../images/denglu_icon1_all_bg.png) no-repeat scroll 0 0 transparent;
+}
+.denglu_icon1_google {
+	background-position: 0 0;
+}
+.denglu_icon1_windowslive {
+	background-position: 0 -40px;
+}
+.denglu_icon1_sina {
+	background-position: 0 -80px;
+}
+.denglu_icon1_tencent {
+	background-position: 0 -120px;
+}
+.denglu_icon1_sohu {
+	background-position: 0 -160px;
+}
+.denglu_icon1_netease {
+	background-position: 0 -200px;
+}
+.denglu_icon1_renren {
+	background-position: 0 -240px;
+}
+.denglu_icon1_kaixin001, .denglu_icon1_kaixin001open {
+	background-position: 0 -280px;
+}
+.denglu_icon1_douban {
+	background-position: 0 -320px;
+}
+.denglu_icon1_yahoo {
+	background-position: 0 -360px;
+}
+.denglu_icon1_qzone {
+	background-position: 0 -400px;
+}
+.denglu_icon1_taobao {
+	background-position: 0 -480px;
+}
+.denglu_icon1_tianya {
+	background-position: 0 -520px;
+}
+.denglu_icon1_alipayquick, .denglu_icon1_alipay {
+	background-position: 0 -440px;
+}
+.denglu_icon1_baidu {
+	background-position: 0 -600px;
+}
+.denglu_icon1_netease163 {
+	background-position: 0 -680px;
+}
+.denglu_icon1_guard360 {
+	background-position: 0 -720px;
+}
+.denglu_icon1_tianyi {
+	background-position: 0 -760px;
+}
+.denglu_icon1_facebook {
+	background-position: 0 -800px;
+}
+.denglu_icon1_twitter {
+	background-position: 0 -840px;
+}
+.denglu_con li .denglu_icon2 {
+	width: 50px;
+	height: 50px;
+	text-indent: -999em;
+	display: block;
+}
+.denglu_icon2_renren, .denglu_icon2_sina, .denglu_icon2_tencent, .denglu_icon2_netease, .denglu_icon2_sohu, .denglu_icon2_windowslive, .denglu_icon2_360, .denglu_icon2_shengda, .denglu_icon2_kaixin001, .denglu_icon2_douban, .denglu_icon2_google, .denglu_icon2_51, .denglu_icon2_qzone, .denglu_icon2_alipay, .denglu_icon2_alipayquick, .denglu_icon2_tenpay, .denglu_icon2_taobao, .denglu_icon2_yahoo, .denglu_icon2_tianya, .denglu_icon2_baidu, .denglu_icon2_kaixin001open, .denglu_icon2_netease163, .denglu_icon2_guard360, .denglu_icon2_tianyi, .denglu_icon2_facebook, .denglu_icon2_twitter {
+	background: url(../images/denglu_icon2_all_bg.png) no-repeat scroll 0 0 transparent;
+}
+.denglu_icon2_google {
+	background-position: 0 -300px;
+}
+.denglu_icon2_windowslive {
+	background-position: 0 -150px;
+}
+.denglu_icon2_sina {
+	background-position: 0 -30px;
+}
+.denglu_icon2_tencent {
+	background-position: 0 -60px;
+}
+.denglu_icon2_sohu {
+	background-position: 0 -120px;
+}
+.denglu_icon2_netease {
+	background-position: 0 -600px;
+}
+.denglu_icon2_renren {
+	background-position: 0 0px;
+}
+.denglu_icon2_kaixin001, .denglu_icon2_kaixin001open {
+	background-position: 0 -240px;
+}
+.denglu_icon2_douban {
+	background-position: 0 -270px;
+}
+.denglu_icon2_yahoo {
+	background-position: 0 -480px;
+}
+.denglu_icon2_qzone {
+	background-position: 0 -360px;
+}
+.denglu_icon2_taobao {
+	background-position: 0 -450px;
+}
+.denglu_icon2_tianya {
+	background-position: 0 -510px;
+}
+.denglu_icon2_alipayquick, .denglu_icon2_alipay {
+	background-position: 0 -540px;
+}
+.denglu_icon2_baidu {
+	background-position: 0 -570px;
+}
+.denglu_icon2_netease163 {
+	background-position: 0 -90px;
+}
+.denglu_icon2_guard360 {
+	background-position: 0 -1080px;
+}
+.denglu_icon2_tianyi {
+	background-position: 0 -1140px;
+}
+.denglu_icon2_facebook {
+	background-position: 0 -1200px;
+}
+.denglu_icon2_twitter {
+	background-position: 0 -1260px;
+}
+.loginSmall_icon li {
+	height: 18px;
+	margin-bottom: 10px;
+}
+.denglu_con li .denglu_icon4, .denglu_con li .denglu_icon4_bind {
+	color: #000;
+	display: block;
+	height: 50px;
+	width: 50px;
+}
+.denglu_con li .denglu_icon4 span, .denglu_con li .denglu_icon4_bind span {
+	display: block;
+	float: left;
+	width: 48px;
+}
+.denglu_icon3_renren, .denglu_icon3_sina, .denglu_icon3_tencent, .denglu_icon3_netease, .denglu_icon3_sohu, .denglu_icon3_windowslive, .denglu_icon3_360, .denglu_icon3_shengda, .denglu_icon3_kaixin001, .denglu_icon3_douban, .denglu_icon3_google, .denglu_icon3_51, .denglu_icon3_qzone, .denglu_icon3_alipay, .denglu_icon3_alipayquick, .denglu_icon3_tenpay, .denglu_icon3_taobao, .denglu_icon3_yahoo, .denglu_icon3_tianya, .denglu_icon3_baidu, .denglu_icon3_kaixin001open, .denglu_icon3_netease163, .denglu_icon3_guard360, .denglu_icon3_tianyi, .denglu_icon3_facebook, .denglu_icon3_twitter {
+	background: url(../images/denglu_icon6_all_bg.png) no-repeat scroll 0 0 transparent;
+}
+.denglu_icon3_google {
+	background-position: 0 0;
+}
+.denglu_icon3_windowslive {
+	background-position: 0 -20px;
+}
+.denglu_icon3_sina {
+	background-position: 0 -40px;
+}
+.denglu_icon3_tencent {
+	background-position: 0 -60px;
+}
+.denglu_icon3_sohu {
+	background-position: 0 -80px;
+}
+.denglu_icon3_netease {
+	background-position: 0 -100px;
+}
+.denglu_icon3_renren {
+	background-position: 0 -120px;
+}
+.denglu_icon3_kaixin001, .denglu_icon3_kaixin001open {
+	background-position: 0 -140px;
+}
+.denglu_icon3_douban {
+	background-position: 0 -160px;
+}
+.denglu_icon3_yahoo {
+	background-position: 0 -180px;
+}
+.denglu_icon3_qzone {
+	background-position: 0 -200px;
+}
+.denglu_icon3_taobao {
+	background-position: 0 -240px;
+}
+.denglu_icon3_tianya {
+	background-position: 0 -260px;
+}
+.denglu_icon3_alipayquick, .denglu_icon3_alipay {
+	background-position: 0 -220px;
+}
+.denglu_icon3_baidu {
+	background-position: 0 -300px;
+}
+.denglu_icon3_netease163 {
+	background-position: 0 -340px;
+}
+.denglu_icon3_guard360 {
+	background-position: 0 -360px;
+}
+.denglu_icon3_tianyi {
+	background-position: 0 -380px;
+}
+.denglu_icon3_facebook {
+	background-position: 0 -400px;
+}
+.denglu_icon3_twitter {
+	background-position: 0 -420px;
+}
+.denglu_icon4_renren, .denglu_icon4_sina, .denglu_icon4_tencent, .denglu_icon4_netease, .denglu_icon4_sohu, .denglu_icon4_windowslive, .denglu_icon4_360, .denglu_icon4_shengda, .denglu_icon4_kaixin001, .denglu_icon4_douban, .denglu_icon4_google, .denglu_icon4_51, .denglu_icon4_qzone, .denglu_icon4_alipay, .denglu_icon4_alipayquick, .denglu_icon4_tenpay, .denglu_icon4_taobao, .denglu_icon4_yahoo, .denglu_icon4_tianya, .denglu_icon4_baidu, .denglu_icon4_kaixin001open, .denglu_icon4_netease163, .denglu_icon4_guard360, .denglu_icon4_tianyi, .denglu_icon4_facebook, .denglu_icon4_twitter {
+	background: url(../images/denglu_icon4_all_bg.png) no-repeat scroll 0 0 transparent;
+}
+.denglu_icon4_google {
+	background-position: 0 0;
+}
+.denglu_icon4_windowslive {
+	background-position: 0 -60px;
+}
+.denglu_icon4_sina {
+	background-position: 0 -120px;
+}
+.denglu_icon4_tencent {
+	background-position: 0 -180px;
+}
+.denglu_icon4_sohu {
+	background-position: 0 -240px;
+}
+.denglu_icon4_netease {
+	background-position: 0 -300px;
+}
+.denglu_icon4_renren {
+	background-position: 0 -360px;
+}
+.denglu_icon4_kaixin001, .denglu_icon2_kaixin001open {
+	background-position: 0 -420px;
+}
+.denglu_icon4_douban {
+	background-position: 0 -480px;
+}
+.denglu_icon4_yahoo {
+	background-position: 0 -540px;
+}
+.denglu_icon4_qzone {
+	background-position: 0 -600px;
+}
+.denglu_icon4_taobao {
+	background-position: 0 -720px;
+}
+.denglu_icon4_tianya {
+	background-position: 0 -780px;
+}
+.denglu_icon4_alipayquick, .denglu_icon2_alipay {
+	background-position: 0 -840px;
+}
+.denglu_icon4_baidu {
+	background-position: 0 -900px;
+}
+.denglu_icon4_netease163 {
+	background-position: 0 -1020px;
+}
+.denglu_icon4_guard360 {
+	background-position: 0 -1080px;
+}
+.denglu_icon4_tianyi {
+	background-position: 0 -1140px;
+}
+.denglu_icon4_facebook {
+	background-position: 0 -1200px;
+}
+.denglu_icon4_twitter {
+	background-position: 0 -1260px;
+}
+.denglu_con li .denglu_icon5, .denglu_con li .denglu_icon5_bind {
+	width: 24px;
+	height: 24px;
+	text-indent: -999em;
+	display: block;
+}
+.denglu_icon5_renren, .denglu_icon5_sina, .denglu_icon5_tencent, .denglu_icon5_netease, .denglu_icon5_sohu, .denglu_icon5_windowslive, .denglu_icon5_360, .denglu_icon5_shengda, .denglu_icon5_kaixin001, .denglu_icon5_douban, .denglu_icon5_google, .denglu_icon5_51, .denglu_icon5_qzone, .denglu_icon5_alipay, .denglu_icon5_alipayquick, .denglu_icon5_tenpay, .denglu_icon5_taobao, .denglu_icon5_yahoo, .denglu_icon5_tianya, .denglu_icon5_baidu, .denglu_icon5_kaixin001open, .denglu_icon5_netease163, .denglu_icon5_guard360, .denglu_icon5_tianyi, .denglu_icon5_facebook, .denglu_icon5_twitter {
+	background: url(../images/denglu_icon5_all_bg.png) no-repeat scroll 0 0 transparent;
+}
+.denglu_icon5_google {
+	background-position: 0 0;
+}
+.denglu_icon5_windowslive {
+	background-position: 0 -30px;
+}
+.denglu_icon5_sina {
+	background-position: 0 -60px;
+}
+.denglu_icon5_tencent {
+	background-position: 0 -90px;
+}
+.denglu_icon5_sohu {
+	background-position: 0 -120px;
+}
+.denglu_icon5_netease {
+	background-position: 0 -150px;
+}
+.denglu_icon5_renren {
+	background-position: 0 -180px;
+}
+.denglu_icon5_kaixin001, .denglu_icon5_kaixin001open {
+	background-position: 0 -210px;
+}
+.denglu_icon5_douban {
+	background-position: 0 -240px;
+}
+.denglu_icon5_yahoo {
+	background-position: 0 -270px;
+}
+.denglu_icon5_qzone {
+	background-position: 0 -300px;
+}
+.denglu_icon5_taobao {
+	background-position: 0 -360px;
+}
+.denglu_icon5_tianya {
+	background-position: 0 -390px;
+}
+.denglu_icon5_alipayquick, .denglu_icon5_alipay {
+	background-position: 0 -420px;
+}
+.denglu_icon5_baidu {
+	background-position: 0 -450px;
+}
+.denglu_icon5_netease163 {
+	background-position: 0 -510px;
+}
+.denglu_icon5_guard360 {
+	background-position: 0 -540px;
+}
+.denglu_icon5_tianyi {
+	background-position: 0 -570px;
+}
+.denglu_icon5_facebook {
+	background-position: 0 -600px;
+}
+.denglu_icon5_twitter {
+	background-position: 0 -630px;
+}
+.denglu_icon5_renren_bind, .denglu_icon5_sina_bind, .denglu_icon5_tencent_bind, .denglu_icon5_netease_bind, .denglu_icon5_sohu_bind, .denglu_icon5_windowslive_bind, .denglu_icon5_360_bind, .denglu_icon5_shengda_bind, .denglu_icon5_kaixin001_bind, .denglu_icon5_douban_bind, .denglu_icon5_google_bind, .denglu_icon5_51_bind, .denglu_icon5_qzone_bind, .denglu_icon5_alipay_bind, .denglu_icon5_alipayquick_bind, .denglu_icon5_tenpay_bind, .denglu_icon5_taobao_bind, .denglu_icon5_yahoo_bind, .denglu_icon5_tianya_bind, .denglu_icon5_baidu_bind, .denglu_icon5_kaixin001open_bind, .denglu_icon5_netease163_bind, .denglu_icon5_guard360_bind, .denglu_icon5_tianyi_bind, .denglu_icon5_facebook_bind, .denglu_icon5_twitter_bind {
+	background: url(../images/denglu_icon5_all_bg_bind.png) no-repeat scroll 0 0 transparent;
+}
+.denglu_icon5_google_bind {
+	background-position: 0 0;
+}
+.denglu_icon5_windowslive_bind {
+	background-position: 0 -30px;
+}
+.denglu_icon5_sina_bind {
+	background-position: 0 -60px;
+}
+.denglu_icon5_tencent_bind {
+	background-position: 0 -90px;
+}
+.denglu_icon5_sohu_bind {
+	background-position: 0 -120px;
+}
+.denglu_icon5_netease_bind {
+	background-position: 0 -150px;
+}
+.denglu_icon5_renren_bind {
+	background-position: 0 -180px;
+}
+.denglu_icon5_kaixin001_bind, .denglu_icon5_kaixin001open_bind {
+	background-position: 0 -210px;
+}
+.denglu_icon5_douban_bind {
+	background-position: 0 -240px;
+}
+.denglu_icon5_yahoo_bind {
+	background-position: 0 -270px;
+}
+.denglu_icon5_qzone_bind {
+	background-position: 0 -300px;
+}
+.denglu_icon5_taobao_bind {
+	background-position: 0 -360px;
+}
+.denglu_icon5_tianya_bind {
+	background-position: 0 -390px;
+}
+.denglu_icon5_alipayquick_bind, .denglu_icon5_alipay_bind {
+	background-position: 0 -420px;
+}
+.denglu_icon5_baidu_bind {
+	background-position: 0 -450px;
+}
+.denglu_icon5_netease163_bind {
+	background-position: 0 -510px;
+}
+.denglu_icon5_guard360_bind {
+	background-position: 0 -540px;
+}
+.denglu_icon5_tianyi_bind {
+	background-position: 0 -570px;
+}
+.denglu_icon5_facebook_bind {
+	background-position: 0 -600px;
+}
+.denglu_icon5_twitter_bind {
+	background-position: 0 -630px;
+}
+.denglu_icon6_renren, .denglu_icon6_sina, .denglu_icon6_tencent, .denglu_icon6_netease, .denglu_icon6_sohu, .denglu_icon6_windowslive, .denglu_icon6_360, .denglu_icon6_shengda, .denglu_icon6_kaixin001, .denglu_icon6_douban, .denglu_icon6_google, .denglu_icon6_51, .denglu_icon6_qzone, .denglu_icon6_alipay, .denglu_icon6_alipayquick, .denglu_icon6_tenpay, .denglu_icon6_taobao, .denglu_icon6_yahoo, .denglu_icon6_tianya, .denglu_icon6_baidu, .denglu_icon6_kaixin001open, .denglu_icon6_netease163, .denglu_icon6_guard360, .denglu_icon6_tianyi, .denglu_icon6_facebook, .denglu_icon6_twitter {
+	background: url(../images/denglu_icon6_all_bg.png) no-repeat scroll 0 0 transparent;
+}
+.denglu_icon6_google {
+	background-position: 0 0;
+}
+.denglu_icon6_windowslive {
+	background-position: 0 -20px;
+}
+.denglu_icon6_sina {
+	background-position: 0 -40px;
+}
+.denglu_icon6_tencent {
+	background-position: 0 -60px;
+}
+.denglu_icon6_sohu {
+	background-position: 0 -80px;
+}
+.denglu_icon6_netease {
+	background-position: 0 -100px;
+}
+.denglu_icon6_renren {
+	background-position: 0 -120px;
+}
+.denglu_icon6_kaixin001, .denglu_icon6_kaixin001open {
+	background-position: 0 -140px;
+}
+.denglu_icon6_douban {
+	background-position: 0 -160px;
+}
+.denglu_icon6_yahoo {
+	background-position: 0 -180px;
+}
+.denglu_icon6_qzone {
+	background-position: 0 -200px;
+}
+.denglu_icon6_taobao {
+	background-position: 0 -240px;
+}
+.denglu_icon6_tianya {
+	background-position: 0 -260px;
+}
+.denglu_icon6_alipayquick, .denglu_icon6_alipay {
+	background-position: 0 -220px;
+}
+.denglu_icon6_baidu {
+	background-position: 0 -300px;
+}
+.denglu_icon6_netease163 {
+	background-position: 0 -340px;
+}
+.denglu_icon6_guard360 {
+	background-position: 0 -360px;
+}
+.denglu_icon6_tianyi {
+	background-position: 0 -380px;
+}
+.denglu_icon6_facebook {
+	background-position: 0 -400px;
+}
+.denglu_icon6_twitter {
+	background-position: 0 -420px;
+}
+.denglu_con li .denglu_icon5, .denglu_con li .denglu_icon5_bind {
+	display: block;
+	height: 24px;
+	text-indent: -999em;
+	width: 24px;
+}
+#slideInner2 li {
+	padding: 2px 5px 2px 0;
+}
+#slideInner2 li a {
+	color: #000000;
+	display: block;
+	height: 18px;
+	width: 18px;
+}

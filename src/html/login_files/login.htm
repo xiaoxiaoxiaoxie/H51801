@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="shortcut icon" href="http://www.ecopen.cn/favicon.ico" type="image/x-icon">
+		<meta name="keywords" content="">
+		<meta name="Description" content="">
+		<title>ShopEx登入控制台-中国领先的社会化登录与用户管理平台服务商</title>
+		<link href="login_data/style.css" rel="stylesheet" type="text/css">
+		<link href="login_data/user_style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="login_data/jquery.js"></script>
+		</head><body><div id="nWidgetDiv2" style="width:308px;height:106px;">
+	        <div class="team_list" style="width: 268px; height: 106px;">
+	            <a class="dl_close" target="_self"></a>
+	            <h2>合作网站账号登录</h2>
+	            <div id="slideshow1" class="team_con"><a class="team_left2" id="leftControl1" href="javascript:;" style="display: none; top: 27.5px;"></a><a class="team_left1" id="leftNoLink1" style="top: 27.5px; visibility: hidden;"></a>
+	                <div id="slidesContainer1" class="teamcon" style="overflow: hidden; width: 260px; height: 72px;">
+	                    <div id="slideInner1" style="width: 260px;">
+	                        <div id="mediashow1" class="denglu_con"><ul style="float: left; width: 260px;"><li><a target="_blank" class="denglu_icon2 denglu_icon2_qzone" title="用QQ登录" href="http://www.ecopen.cn/transfer/qzone/authorize?appid=1175343331"><span>QQ</span></a></li><li><a target="_blank" class="denglu_icon2 denglu_icon2_sina" title="用新浪微博登录" href="http://www.ecopen.cn/transfer/sina/authorize?appid=1175343331"><span>新浪微博</span></a></li><li><a target="_blank" class="denglu_icon2 denglu_icon2_taobao" title="用淘宝登录" href="http://www.ecopen.cn/transfer/taobao/authorize?appid=1175343331"><span>淘宝</span></a></li><li><a target="_blank" class="denglu_icon2 denglu_icon2_alipayquick" title="用支付宝登录" href="http://www.ecopen.cn/transfer/alipayquick/authorize?appid=1175343331"><span>支付宝</span></a></li></ul></div>
+	                    </div>
+	                </div>
+	            <a class="team_right2" id="rightControl1" href="javascript:;" style="display: none; top: 27.5px;"></a><a class="team_right1" id="rightNoLink1" style="top: 27.5px; visibility: hidden;"></a></div>
+	        </div>
+		</div>
+
+		<script type="text/javascript">
+		    var _defsizewidth = [101, 130, 28, 60, 28, 78];
+		    var _defsizeheight = [49, 36, 28, 60, 28, 32];
+			var widget = 2;
+			var wwidth = 308;
+			var wheight = 106;
+			var def_w_side = 40, def_h_side = 28, def_w_padding = 8, def_h_padding = 6;
+			var currentPositionList = [0, 0, 0, 0];
+			var slideWidthList = [452, 438, 438, 348, 272, 438];
+			var numberOfSlidesList = [];
+			var _mediaList = [];
+		    		        _mediaList.push({id:"13", icon:"qzone", name:"QQ",authUrl:"http://www.ecopen.cn/transfer/qzone/authorize?appid=1175343331"});
+		    		        _mediaList.push({id:"3", icon:"sina", name:"新浪微博",authUrl:"http://www.ecopen.cn/transfer/sina/authorize?appid=1175343331"});
+		    		        _mediaList.push({id:"16", icon:"taobao", name:"淘宝",authUrl:"http://www.ecopen.cn/transfer/taobao/authorize?appid=1175343331"});
+		    		        _mediaList.push({id:"18", icon:"alipayquick", name:"支付宝",authUrl:"http://www.ecopen.cn/transfer/alipayquick/authorize?appid=1175343331"});
+		    			var sizeList = getMSize(widget, wwidth, wheight);
+
+
+			// 分页初始化
+			var i=widget-1;
+	        var slides = $('#slideInner' + i).find("ul");
+	        numberOfSlidesList[i] = slides.length;
+
+	        // Remove scrollbar in JS
+	        $('#slidesContainer' + i).css('overflow', 'hidden');
+
+	        // Wrap all .slides with #slideInner div
+	        slides
+	            .wrapAll('<div id="slideInner' + i + '"></div>')
+	            // Float left to display horizontally, readjust .slides width
+	            .css({
+	                'float':'left',
+	                'width':slideWidthList[i]
+	            });
+
+	        // Set #slideInner width equal to total width of all slides
+	        $('#slideInner' + i).css('width', slideWidthList[i] * numberOfSlidesList[i]);
+
+	        // Insert controls in the DOM
+
+	        $('#slideshow' + i)
+	            .prepend('<a class="team_left2" id="leftControl' + i + '" href="javascript:;"></a><a class="team_left1" id="leftNoLink' + i + '" style="display:none"></a>')
+	            .append('<a class="team_right2" id="rightControl' + i + '" href="javascript:;"></a><a class="team_right1" id="rightNoLink' + i + '" style="display:none"></a>');
+
+	        // Hide left arrow control on first load
+	        manageControls(currentPositionList[i], i);
+
+	        // 少于等于8个隐藏下一页的按钮
+	        if (numberOfSlidesList[i] == 1) {
+	            $("#leftNoLink" + i).css("visibility", "hidden");
+	            $("#rightNoLink" + i).css("visibility", "hidden");
+	        }
+
+	        // Create event listeners for .controls clicks
+	        bindClick(i);
+
+
+			changePage(widget, wwidth, wheight);
+
+	    	function changePage(widget, wwidth, wheight) {
+	        	var index = widget - 1;
+		        var count = sizeList[0];
+
+		        currentPositionList[index] = 0;
+		        slideWidthList[index] = sizeList[1];
+		        numberOfSlidesList[index] = Math.ceil(_mediaList.length / count);
+
+		        // 重新生成节点
+		        var div = "";
+		        switch (index) {
+		            case 0:// 大按钮
+		                for (var i1 = 0, j1 = _mediaList.length; i1 < j1; i1++) {
+		                    var flagi1 = i1 % count == 0;
+		                    var endFlagi1 = i1 % count == count - 1 || i1 == j1 - 1;
+		                    if (flagi1) {
+		                        div += "<ul>"
+		                    }
+		                    div += "<li><a target='_blank' class='denglu_icon1 denglu_icon1_" + _mediaList[i1].icon + "' title='用" + _mediaList[i1].name + "登录' href='"+_mediaList[i1].authUrl+"'><span>" + _mediaList[i1].name + "</span></a></li>"
+		                    if (endFlagi1) {
+		                        div += "</ul>"
+		                    }
+		                }
+		                break;
+		            case 1:// 中按钮
+		                for (var i2 = 0, j2 = _mediaList.length; i2 < j2; i2++) {
+		                    var flag2 = i2 % count == 0;
+		                    var endFlag2 = i2 % count == count - 1 || i2 == j2 - 1;
+		                    if (flag2) {
+		                        div += "<ul>"
+		                    }
+		                    div += "<li><a target='_blank' class='denglu_icon2 denglu_icon2_" + _mediaList[i2].icon + "' title='用" + _mediaList[i2].name + "登录' href='"+_mediaList[i2].authUrl+"'><span>" + _mediaList[i2].name + "</span></a></li>"
+		                    if (endFlag2) {
+		                        div += "</ul>"
+		                    }
+		                }
+		                break;
+		            case 2:// 小按钮
+		                for (var i3 = 0, j3 = _mediaList.length; i3 < j3; i3++) {
+		                    var flag3 = i3 % count == 0;
+		                    var endFlag3 = i3 % count == count - 1 || i3 == j3 - 1;
+		                    if (flag3) {
+		                        div += "<ul>"
+		                    }
+		                    div += "<li><a target='_blank' class='denglu_icon3 denglu_icon3_" + _mediaList[i3].icon + "' title='用" + _mediaList[i3].name + "登录' href='"+_mediaList[i3].authUrl+"' ></a></li>"
+		                    if (endFlag3) {
+		                        div += "</ul>"
+		                    }
+		                }
+		                break;
+
+		            case 3:// 大图标
+		                for (var i4 = 0, j4 = _mediaList.length; i4 < j4; i4++) {
+		                    var flag4 = i4 % count == 0;
+		                    var endFlag4 = i4 % count == count - 1 || i4 == j4 - 1;
+		                    if (flag4) {
+		                        div += "<ul>"
+		                    }
+		                    div += "<li><a target='_blank' class='denglu_icon4 denglu_icon4_" + _mediaList[i4].icon + "' title='用" + _mediaList[i4].name + "登录' href='"+_mediaList[i4].authUrl+"' ></a></li>"
+		                    if (endFlag4) {
+		                        div += "</ul>"
+		                    }
+		                }
+		                break;
+		            case 4:// 中图标
+		                for (var i5 = 0, j5 = _mediaList.length; i5 < j5; i5++) {
+		                    var flag5 = i5 % count == 0;
+		                    var endFlag5 = i5 % count == count - 1 || i5 == j5 - 1;
+		                    if (flag5) {
+		                        div += "<ul>"
+		                    }
+		                    div += "<li><a target='_blank' class='denglu_icon5 denglu_icon5_" + _mediaList[i5].icon + "' title='用" + _mediaList[i5].name + "登录' href='"+_mediaList[i5].authUrl+"' ></a></li>"
+		                    if (endFlag5) {
+		                        div += "</ul>"
+		                    }
+		                }
+		                break;
+		            case 5:// 小图标
+		                for (var i6 = 0, j6 = _mediaList.length; i6 < j6; i6++) {
+		                    var flag6 = i6 % count == 0;
+		                    var endFlag6 = i6 % count == count - 1 || i6 == j6 - 1;
+		                    if (flag6) {
+		                        div += "<ul>"
+		                    }
+		                    div += "<li><a target='_blank' class='denglu_icon6 denglu_icon6_" + _mediaList[i6].icon + "' title='用" + _mediaList[i6].name + "登录' href='"+_mediaList[i6].authUrl+"' ><span>" + _mediaList[i6].name + "</span></a></li>"
+		                    if (endFlag6) {
+		                        div += "</ul>"
+		                    }
+		                }
+		                break;
+		        }
+		        //替换HTML
+		        if (div) {
+		            //大按钮尺寸设置
+		            if (widget == 1) {
+		                $("#nWidgetDiv1").css({"width":sizeList[5], "height":sizeList[6]})
+		                    .children("div").css({"width":sizeList[3], "height":sizeList[4]})
+		                    .children("p").css({"width":sizeList[1]});
+		            }
+		            //中按钮尺寸设置
+		            if (widget == 2) {
+		                $("#nWidgetDiv2").css({"width":sizeList[5], "height":sizeList[6]})
+		                    .children("div").css({"width":sizeList[3], "height":sizeList[4]})
+		                    .children("p").css({"width":sizeList[1]});
+		            }
+		            //小按钮尺寸设置
+		            if (widget == 3) {
+		                $("#nWidgetDiv3").css({"width":sizeList[5], "height":sizeList[6]})
+		                    .children("div").css({"width":sizeList[3], "height":sizeList[4]})
+		                    .children("p").css({"width":sizeList[1]});
+		            }
+		            //大图标尺寸设置
+		            if (widget == 4) {
+		                $("#nWidgetDiv4").css({"width":sizeList[5], "height":sizeList[6]})
+		                    .children("div").css({"width":sizeList[3], "height":sizeList[4]})
+		                    .children("p").css({"width":sizeList[1]});
+		            }
+		            //中图标尺寸设置
+		            if (widget == 5) {
+		                $("#nWidgetDiv5").css({"width":sizeList[5], "height":sizeList[6]})
+		                    .children("div").css({"width":sizeList[3], "height":sizeList[5]})
+		                    .children("p").css({"width":sizeList[1]});
+		            }
+		            //小图标尺寸设置
+		            if (widget == 6) {
+		                $("#nWidgetDiv6").css({"width":sizeList[5], "height":sizeList[6]})
+		                    .children("div").css({"width":sizeList[3], "height":sizeList[5]})
+		                    .children("p").css({"width":sizeList[1]});
+		            }
+
+		            $("#mediashow" + index).html("" + div);
+		            $("#slidesContainer" + index).css({"width":sizeList[1], "height":sizeList[2]});
+		            $("#slideInner" + index).find("ul")
+		                .css({
+		                    'float':'left',
+		                    'width':slideWidthList[index]
+		                });
+		            $('#slideInner' + index).css('width', slideWidthList[index] * numberOfSlidesList[index]);
+
+
+		            manageControls(currentPositionList[index], index);
+		            return true;
+		        }
+		        return false;
+			}
+		    function getMSize(widget, width, height) {
+		        var g_width = width;
+		        var g_height = height;
+		        var result = {};
+		        // 去左右上下边框
+		        width -= def_w_side;
+		        height -= def_h_side;
+
+		        width -= def_w_padding;
+		        height -= def_h_padding;
+
+		        // 计算长宽放几个按钮
+		        var w = 0, h = 0;
+		        widget = Number(widget);
+		        w = Math.floor(width / _defsizewidth[widget - 1]);
+		        h = Math.floor(height / _defsizeheight[widget - 1]);
+		        width = _defsizewidth[widget - 1] * w;
+		        height = _defsizeheight[widget - 1] * h;
+		        if (w == 0 || h == 0) {
+		            return result;
+		        }
+
+		        result[0] = w * h;	// 一页的个数
+		        result[1] = width;	// 中心的宽度
+		        result[2] = height;	// 中心的高度
+		        result[3] = width + def_w_padding;	// 加上分页符的宽度
+		        result[4] = height + def_h_side + def_h_padding;	// 加上上下的高度
+		        result[5] = result[3] + def_w_side;	// 加上弹出框的宽度
+		        result[6] = result[4];	// 加上弹出框的高度
+
+		        if (g_width != result[5]) {
+		            $("#nwidth").val("" + result[5]);
+		        }
+		        if (g_height != result[6]) {
+		            $("#nheight").val("" + result[6]);
+		        }
+
+		        return result;
+		    }
+		    function bindClick(index) {
+		        $('#leftControl' + index + ', #rightControl' + index)
+		            .bind('click', function () {
+		                // Determine new position
+		                currentPositionList[index] = ($(this).attr('id') == ('rightControl' + index)) ? currentPositionList[index] + 1 : currentPositionList[index] - 1;
+		                // Hide / show controls
+		                manageControls(currentPositionList[index], index);
+		                // Move slideInner using margin-left
+		                $('#slideInner' + index).animate({
+		                    'marginLeft':slideWidthList[index] * (-currentPositionList[index])
+		                });
+		            });
+		    }
+		    //处理左右按钮规则
+		    function manageControls(position, index) {
+		    	//alert('numberOfSlidesList='+numberOfSlidesList+'index='+index);
+		        if (numberOfSlidesList[index] == 1) {
+		            $("#leftNoLink" + index).css("visibility", "hidden");
+		            $("#rightNoLink" + index).css("visibility", "hidden");
+		        } else {
+		            $("#leftNoLink" + index).css("visibility", "");
+		            $("#rightNoLink" + index).css("visibility", "");
+		        }
+		        // Hide left arrow if position is first slide
+		        if (position < 0) {
+		            position = 0;
+		        }
+		        if (position == 0) {
+		            $('#leftControl' + index).hide();
+		            $('#leftNoLink' + index).show();
+		        } else {
+		            $('#leftNoLink' + index).hide();
+		            $('#leftControl' + index).show();
+		        }
+		        // Hide right arrow if position is last slide
+		        if (position > numberOfSlidesList[index] - 1) {
+		            position = numberOfSlidesList[index] - 1;
+		        }
+		        if (position == numberOfSlidesList[index] - 1) {
+		            $('#rightControl' + index).hide();
+		            $('#rightNoLink' + index).show();
+		        } else {
+		            $('#rightNoLink' + index).hide();
+		            $('#rightControl' + index).show();
+		        }
+
+		        // 更新箭头高度
+		        var sidepx = 0;
+		        switch (index + 1) {
+		            case 1:
+		            case "1":
+		                sidepx = 2;
+		                break;
+		            case 2:
+		            case "2":
+		                sidepx = 2;
+		                break;
+		            case 3:
+		            case "3":
+		                sidepx = 3;
+		                break;
+		            case 4:
+		            case "4":
+		                sidepx = 5;
+		                break;
+		            case 5:
+		            case "5":
+		                sidepx = 3;
+		                break;
+		        }
+		        var toppx = ($("#slideshow" + index).height() - 19 - sidepx) / 2;
+		        $('#rightControl' + index).css("top", toppx + "px");
+		        $('#rightNoLink' + index).css("top", toppx + "px");
+		        $('#leftControl' + index).css("top", toppx + "px");
+		        $('#leftNoLink' + index).css("top", toppx + "px");
+		    }
+		</script>
+	
+
+</body></html>

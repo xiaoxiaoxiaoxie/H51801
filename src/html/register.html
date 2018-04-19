@@ -1,0 +1,47 @@
+<!-- 注册 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册界面</title>
+	<link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <script src="/lib/requirejs/require.js" data-main="/js/register"></script>
+</head>
+<body>
+	<header></header>
+	<div class="login_bt" style="text-align:center; padding-left:0; width:996px; background:#fff;">
+		<span style="float:left; width:45%; display:inline-block; border-top:1px dashed #d5d5d5; margin-top:14px;"></span>
+		<span style="width:10%; display:inline-block; color:#909090; font-weight:bold;">用户注册</span>
+		<span style="float:right; width:45%; display:inline-block; border-top:1px dashed #d5d5d5; margin-top:14px;"></span>
+	</div>
+	<div class="zc_jf"><i></i>注册赠送积分：100</div>
+	<div class="user_zc">
+		<form  class="ajaxForm">
+			<dl class="login_k regsetp_k">
+				<dt>手机号</dt>
+				<dd>
+					<input class="phone" name="mobile"   maxlength="11" type="text" placeholder="请输入注册手机号码" >
+					<span id="useridmsg"></span>
+				</dd>
+			</dl>
+			<dl class="login_k regsetp_k">
+				<dt>密&nbsp;&nbsp;码</dt>
+				<dd>
+					<input class="password" name="password" placeholder="密码必须输入6-20位字符" maxlength="20" type="password">
+					<span id="password"></span>
+				</dd>
+			</dl>
+			<dl class="login_k regsetp_k">
+				<dt>确认密码</dt>
+				<dd>
+					<input class="repassword" name="repassword"  maxlength="20" type="password" placeholder="请再次输入密码">
+					<span id="repassword1"></span>
+				</dd>
+			</dl>
+			<input class="submitbtn" type="submit"  value="注册">
+		</form>
+	</div>
+	<footer></footer>
+</body>
+</html>

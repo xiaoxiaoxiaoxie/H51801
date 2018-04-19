@@ -1,0 +1,233 @@
+<!-- 提交 --> <!DOCTYPE html> <html lang="en"> <head>     <meta charset="UTF-8">
+<title>提交界面</title>     <link rel="stylesheet" href="/css/common.css"> <link
+rel="stylesheet" href="/css/confirm.css">     <script
+src="/lib/requirejs/require.js" data-main="/js/confirm"></script> </head>
+<body>     <div id="tq_kefu_main" class="tq_div_main" style="border: 0px ridge
+rgb(234, 234, 234); visibility: visible; position: fixed; top: 455px; z-index:
+9997; padding: 0px; background: transparent none repeat scroll 0% 0%; text-
+align: center; right: 1px; width: auto;"> <div id="tq_kefu_normal_container">
+<img src="http://userf iles.tq.cn/userfiles/upload_117/9644661/1421657021.jpg"
+style="BACKGROUND:transparent none repeat scroll 0% 0%;cursor:pointer"
+onclick="TQKF.kefuimg.Distrabute()" border="0">         </div> </div>
+<header></header>     <div class="block box">         <div id="ur_here"></div>
+</div>     <div class="jiesuan">         <form id="theForm" action="flow.php"
+method="post" name="theForm" > <div
+class="cg_cc"> <div class="h_cc"> <div class="login_bt" style ="text-
+align:center; padding-left:0; width:996px; background:#fff;"> <span
+style="float:left; width:45%; display:inline-block; border-top:1px dashed
+#d5d5d5; margin-top:14px;"></span> <span style="width:10%; display :inline-
+block; color:#909090; font- weight:bold;">结算</span> <span style="float:right;
+width:45%; display:inline-block; border- top:1px dashed #d5d5d5; margin-
+top:14px;"></span> </div> <div class="shouhuo peisong">
+<p class="head"><span>配送信息</span></p>                         <div class="shr
+shre" style="margin:10px 0 0;padding:0"> <div class="list" style="margin-left:
+25px; height:auto;"> <div class="field"> <input id="ships3" class="shipping"
+name="shipping" value="3" data- fee="￥30.00" is_waim="0" is_kuaid="0"
+shipping_code="hll_express" checked="checked" style="margin- top:10px;"
+type="radio">&nbsp; <label for="ships3" style="margin-
+right:25px;">送货上门</label> <input id="ships8" class="shipping" name="shipping"
+value="8" data-fee="￥0.00" is_waim="0" is_kuaid="0" shipping_code="cac" style
+="margin-top:10px;" type="radio">&nbsp; <label for="ships8" style="margin-
+right:25px;">门店自取</label> </div> </div>                         </div>
+</div> <div class="address">                         <div class="shouhuo"> <p
+class="head">                                 <span
+class="ship_title">收货信息</span>                             </p> <div
+class="shr shra edit_html" style="padding: 0;margin: 0"> <div class="form"
+style="margin-top: 9px;"> <div class="new_add"> <h3
+class="ship_title">收货人信息</h3> <div class="list">
+<span class="label xuanzedizhi">选择地区<em>*</em></span> </div> <div
+class="field"> <div class="system"> <table cellspacing="1" cellpadding="0">
+<tbody> <tr> <td> <input id="country" name="country" value="1" type="hidden">
+<select id="selProvince" class="region_parent" name="province"
+style="display:block" > <option
+value="2" selected="">北京</option> <option value="4108">山西</option> <option
+value="4120">山东</option> <option value="4121">河南</option> <option
+value="4122">江苏</option> <option value="4123">浙江</option> <option
+value="4124">安徽</option> <option value="4125">江西</option> <option
+value="4381">贵州</option> <option value="4127">湖北</option> <option
+value="4128">重庆</option> <option value="4129">上海</option> <option
+value="4388">云南</option> <option value="4408">甘肃</option> <option
+value="4422">宁夏</option> <option value="3419">四川</option> <option
+value="4443">内蒙古</option> <option value="3425">河北</option> <option
+value="3428">天津</option> <option value="3431">辽宁</option> <option
+value="3432">吉林</option> <option value="3433">黑龙江</option> <option
+value="3437">陕西</option> <option value="4345">湖南</option> </select> </td> <td>
+<select id="selCity" class="region_parent" name="city" style="display:block"
+ > <option
+value="">请选择城市</option> <option value="52" selected="">北京</option> </select>
+</td> <td> <select name="district" id="selDistrict" class="input100 area_info
+cityname" > <option value="">请选择县区</option>
+<option value="3515">东城区</option> <option value="501">西城区</option> <option
+value="502">海淀区</option> <option value="503">朝阳区</option> <option
+value="506">丰台区</option> <option value="507">石景山区</option> <option
+value="3741">通州区</option> <option value="3782">昌平区</option> <option
+value="3669">房山区</option> <option value="3696">大兴区</option> <option
+value="3760">顺义区</option> <option value="513">怀柔区</option> <option
+value="514">平谷区</option> <option value="516">密云县</option> <option
+value="517">延庆县</option> <option value="509">门头沟区</option> </select> </td>
+<td> <select name="huan" id="mendian" class="input100 area_info"
+style="display:none;"> <option value="">请选择街道</option> </select> </td> </tr>
+</tbody> </table>                                             </div> </div>
+<div class="list xiangxidizhi"> <span class="label">详细地址<em>*</em> </span>
+<div class="field"> <input name="address" value="" class="textbox
+address_info" onfocus="focusTextBox('status0');" type="text">
+</div> <div class="status status0" id="orderConsigneeAddressaddress"
+style="display: none;"> <span data-
+content="请填写详细街道地址及门牌号">请填写详细街道地址及门牌号</span> </div> <div style="width:100
+%;margin-top:5px; color:red; display:none;" id="shippingAddressTips">不在配送范围内
+，请更换快递派送方式</div> <ul id="addressKeyBox" style="width: 360px; border: 1px solid
+#ccc; border- top: none; position: absolute; z-index:99999; background:#fff;
+top:65px; display:none;"></ul> </div> <div class="list full_address"> <span
+class="label shouhuoren">收货人姓名<em>*</em> </span> <div class="field"> <input
+name="consignee" value="" class="textbox username"  type="text"> </div> <div
+class="status1 status" id="name" style="display: none;"> <span>例如 王先生 或者
+李女士</span>                                             </div> </div> <div
+class="list"> <span class="label shouhuoshouji">收货人手机号码<em>*</em> </span> <div
+class="field"> <input name="mobile" value=""   class="textbox phone"
+maxlength="11" type="text"> </div> <div class="status2 status"
+id="mobileTelephone" style="/*! display: none;*/">
+<span>请正确输入收货人的手机号，方便蛋糕顺利送达</span> </div> </div> <div class="forma"
+id="dinghuoren" style="margin-top:20px;"> <h3 chass="dinghr">
+订货人信息 </h3> <div class="list"> <span class="label
+dinghr">订货人手机号码（接收短信）<em>*</em> <div class="same" style="top:0;left:258px;">
+<a href="#" class="copy"> 与收货人信息相同 </a> </div> </span> <div
+class="field"> <input name="person_phone" value="" class="textbox
+person_phone" maxlength="11" onfocus="javascript:focusTextBox('status6');" type="text"> </div> <div
+class="status status6" id="ordererMobile"> <span>请正确输入收货人的手机号，方便蛋糕顺利送达</span>
+</div> </div> </div> </div> </div> <div class="form-btn form-btn2
+edit_user_address"> <span class="baocun saveAdressForm" style="margin-left:
+30px;">保存收货信息</span> </div>                             </div> </div> <input
+name="add_finsh" value="0" type="hidden"> </div> <div class="shouhuo peisong">
+<p class="head" style ="margin-left: 6px;"> <span>收货日期</span> </p> <div
+class="shr shre" style="margin:0;padding:0"> <div class="list list_date
+bestTimeBox" style="height:52px; margin-left: 25px;"> <span class="label"
+style="height:20px; line-height:20px; padding:0">&nbsp;</span> <input
+class="textbox change_dates" value="2018-03-13" name="deliverdate"
+maxlength="16" size="10"  readonly="" type="text"><!--
+onfocus="WdatePicker({startDate:'%y-%M-%13',dateFmt:'yyyy-MM- dd',alwa
+ysUseStartDate:true,minDate:'2018-03-13',onpicking:function(dp){return
+get_times(dp.cal.getNewDateStr());}})"--> <i></i> <div class="field"
+style="width:700px;"> <select style ="margin-top:1px;margin-
+left:2%;height:30px;" name="delivertime" class="option">
+<option value="19:00">19:00</option><option
+value="19:30">19:30</option><option value="20:00">20:00</option><option
+value="20:30">20:30</option><option value="21:00">21:00</option> </select>
+<span style="line-height:30px;height:30px;margin- left:10px;">至</span> <select
+style="margin-top:1px;margin- left:2%;height:30px" name="deliverminute"
+id="bean.deliverminute" class="option_z"> <option
+value="19:00">19:00</option><option value="19:30">19:30</option><option
+value="20:00">20:00</option><option value="20:30">20:30</option><option
+value="21:00">21:00</option> </select> </div> </div>
+</div> </div> <div class="shouhuo zhifu" id="zhifuUrl"> <p class="head" style
+="margin-left: 6px;"> <span>支付方式</span> <span class="gidet change_p"
+style="display:none">修改</span> </p> <div class="moren">
+<p id="zhifufangshi"></p> </div> <div class="shr" style=" margin-left: 0px;
+padding:0px 10px;"> <div class="pay" id="pay_lists" style ="margin-left:
+20px;"> <div style ="margin-top:15px;"> <label style="margin- right:15px;
+width:150px; display:inline-block;"> <input id="12" name="payment" value="12"
+type="radio"><!-- onclick="selectPayment(this);changePayment(this);"--> <font
+id="payment12" class="payment_s">货到付款(Pos机)</font> </label> <label style
+="margin-right:15px; width:150px; display:inline-block;"> <input id="16"
+name="payment" value="16"  type="radio"> <font id="payment16"
+class="payment_s">货到付款(现金)</font> </label> </div> <div style="margin-
+top:15px;"> <label style="margin-right:15px; width:150px; display :inline-
+block;"> <input id="10" name="payment" value="10" type="radio"> <font
+id="payment10" class="payment_s">paypal</font> </label> <label style="margin-
+right:15px; width:150px; display:inline- block;"> <input id="1" name="payment"
+value="1"  type="radio"> <font id="payment1" class="payment_s">支付宝</font>
+</label> <label style ="margin-right:15px; width:150px; display:inline-
+block;"> <input id="17" name="payment" value="17"  type="radio"> <font
+id="payment17" class="payment_s">微信-在线支付</font> </label> <label style="margin-
+right:15px; width:150px; display:inline-block;"> <input id="19" name="payment"
+value="19"  type="radio"> <font id="payment19"
+class="payment_s">鹿晗运动季专用</font> </label> </div> <div style="margin-
+top:15px;"> <label style="margin-right:15px; width:150px; display :inline-
+block;"> <input id="15" name="payment" value="15" type="radio"> <font
+id="payment15" class="payment_s">银联在线支付</font> </label> </div> <div style
+="margin-top:15px;"> <label style="margin- right:15px; width:150px; display
+:inline-block;"> <input id="9" name="payment" value="9"  type="radio"> <font
+id="payment9" class="payment_s">银行汇款/转帐</font> </label> <div
+style="width:500px; margin- left:20px; margin-top:3px; display:none;"
+id="bank_pay_desc"> 个人：何英<br> 开户银行：中国建设银行股份有限北京通州支行<br>
+银行账号：6217000010103225804<br> <br> 在完成汇款后请您立即与我们的客服人员联系，客服电话：400-700-5999
+</div> </div> </div> </div> <div class="select_pay"></div>
+</div> <!-- <div class ="form-btn">                             <span
+class="shrf">保存支付方式</span> </div> --> <div class="shouhuo xiangqing"> <p
+class="head"> <span>订单详情</span>                             </p> <table
+class="xq" cellspacing="0" cellpadding="0"> <tbody> <tr> <th class="ssa">
+<span>名称</span> </th> <th class="ssb"> <span>尺寸</span> </th> <th class="ssb">
+<span>积分</span> </th> <th class="ssb"> <span>数量</span> </th> <th class="ssf">
+<span>小计</span> </th> </tr> <tr class="b_line">
+<td> <dl> <dt> <img src="/images/14_G_1455939491906.jpg" width="60"
+height="60" align="absMiddle"> </dt> <dd style="line-height:60px;">
+<p>赠品蜡烛（规格:盒）</p> <!-- <label>HLL000014</label> --> </dd> </dl> </td> <td
+style="font-size: 15px;"></td> <td>0积分</td> <td>2</td> <td style="font-size:
+16px;">0.00</td> </tr> <tr class="b_line">
+<td> <dl> <dt> <a href="detailed.php?id=74" target="_blank"> <img
+src="/images/74_G_1456910476639.jpg" width="60" height="60"
+align="absMiddle"></a> </dt> <dd style="line-height:60px;"> <p>玫瑰花园</p> <!--
+<label>YS000074</label> --> </dd> </dl> </td> <td style="font-size:
+15px;">14x14cm<br> </td> <td>229积分</td> <td>2</td> <td style ="font-size:
+16px;">229.00</td> </tr> <tr class="b_line"> <td></td> <td colspan="2"
+style="visibility:hidden;"> <textarea class="bak" name="238gx0z1406"
+placeholder="备注（200个字符以内）" maxlength="200"></textarea> </td> <td colspan="2">
+<textarea class="bak" id="shengrip" name="text[74]"
+placeholder="蛋糕牌（例如:生日快乐）汉字8个字以内、英文16个字符以内 maxlength="16" style="height:34px;" ></textarea><!--
+onblur="setSrp(this, '759731');"--> </td> </tr> </tbody>
+</table> <div class="h_fy" id="ordermoney">
+<div id="ordermoneya">                                     <input
+name="bean.invoice" type="hidden"> <div class="h_fy_right">
+<div id="showmoney"> 商品金额合计:<span id="totalUserPrice">￥458.00</span>
+配送费用:<span>￥0.00</span> <label>需付:<b id="paid" class="jg" style ="margin-
+left:0">￥458.00</b></label> <p></p> </div> <input value="提交"
+style="display:none" class="submit_done" type="submit"> <textarea name="note"
+class="bak" type="text" placeholder="备注:(100字以内)" maxlength="100"
+></textarea><!-- onblur="setMessage(this)"--> <span
+class="tijiao">确认并提交订单</span><!-- onclick="javascript:submitForm_done();"-->
+</div> </div> <div class="h_fy_left">
+<div> <p class="hh youhui" id="hh1"> 优惠券<i style="background-position:4px
+-84px;margin- left:-5px; margin-top:-4px; margin-right:0"></i> </p> </div>
+<div class="fpneirong" id="showyouhui" style="display:none"><div
+class="showyh"> <p>优惠券冲抵：使用优惠券抵消部分总额</p> <p>添加优惠券（注：参加促销活动的商品不能使用优惠券）</p> <p
+class="line" style="border-bottom:none;">或者输入线下红包序列号： <input name="bouns_sn"
+value="" style="width: 160px;height: 28px;line-height: 28px;border: 1px solid
+#d6d5d5;vertical-align: middle;" type="text"> <a
+href="#">确定</a> </p> </div> <!--<div
+class="youhuixx" id="youhuixx"></div>--> <!--csds--> </div> <div
+class="fapiao">                                         <p class="hh" style
+="font-size: 15px;"> <span id="hh">发　票 <i style ="background-position:0px
+-84px;margin-left:-5px; margin- top:-4px; margin- right:0"></i> </span> </p>
+</div> <div class="fpneirong" id="fpneirong" style="display:none"> <div
+class="item itema" style="width:100%"> <input name="need_inv" value="1"
+class="fapiaos" style="display:none" type="checkbox"> <span>发票类型</span> <span>
+<input class="payee" name="inv_type" value="个人" type="radio"> 个人</span> <span>
+<input class="payee" name="inv_type" value="单位" type="radio"> 单位</span> </div>
+<div class="item itemd" style="width:100%"> 发票内容 <select name="inv_content"
+id="ecs"  style="border:1px solid #ccc;"><!--
+onchange="changeNeedInv()"--> <!-- <option value="">请选择</option> --> <option
+value="蛋糕">蛋糕</option> </select> </div> <div class="imm" id="dwmc"
+style="width:100%"> <span> <font id="invTitleBox">发票抬头</font> <input
+id="invTitle" name="inv_payee" value="" type="text"> </span> </div> <div
+class="companyinvbox" style="display:none;"> <div class="imm" id="dwmc"
+style="width:100%"> <span>纳税人识别号 <input id="invNumber" name="inv_number"
+value="" type="text"> </span> </div> <div class="imm" id="dwmc"
+style="width:100%"> <span>手机号码 <input id="invMobile" name="inv_mobile"
+value="" type="text"> </span> </div> <div class="imm" id="dwmc"
+style="width:100%"> <span>电子邮箱 <input id="invEmail" name="inv_email" value=""
+type="text"> </span> </div> </div> <div class="imm"> <a >确认</a> <!-- <a
+class="fpquxiao" onclick="changeNeedInv_muyu(0)">取消发票信息</a> --> </div> </div>
+<div class="news newsa"> <label> <span id="showfpdw"> </span> </label> </div>
+<div> <div> <p style="font-size: 15px; line-height: 25px;" class="hh jifen"> 积
+分<i style ="background-position:4px -84px;margin-left:-5px; margin- top:-4px;
+margin- right:0"></i> </p> </div> <div class="jifen_div fpneirong"
+style="display:none"> <!--<p class="line">积分冲抵：使用积分抵消部分总额</p>--> <p
+class="line">可用积分：100分，（100积分兑换1元）</p> <p class="line" style="margin-
+top:5px;"> <input name="jifen_num" class="bak" id="inp_integral"
+onkeyup="ttt(this.value)" value="" style="width: 160px;height: 28px;line-
+height: 28px;border: 1px solid #d6d5d5;vertical- align: middle;" type="text">
+<span id="mon" style="color:#6DC2DF;">￥0元</span> <a
+href="#" class="jifen_but">确定</a> </p> </div>
+</div>                                 </div> </div> <input name="step"
+value="done" type="hidden">                         </div> </div> </div>
+</div>         </form>     </div> <footer></footer> <script
+src="/js/confirm.js"></script> </body> </html>

@@ -1,0 +1,83 @@
+<!-- 头部 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>头部</title>
+</head>
+<body>
+	<div class="header">
+	<h1 class="h1">
+		<a href="/index.html">
+			<img src="/images/logo.png">
+		</a>
+	</h1>
+	<div class="head_right head_right_new">  <!--头部右边-->
+		<div class="h_login" style="margin-top: -8px;margin-bottom: 8px">
+			<label>
+				<a class="User" href="/html/login.html" style="text-decoration: none;">登录</a>
+				<a class="zhuce" href="/html/register.html" style="margin-left: 20px;text-decoration: none;">注册</a>
+			</label>
+			<span id="gouwuche" class="car" style="position: relative;">
+				<a href="/html/cart.html" style="text-decoration: none;">
+					<b id="count">0</b>件
+					<b id="car_price" style="position: absolute;top: -8px;left: 0;"></b>
+				</a>
+			</span>
+			<label id="dizhi_self" class="dizhi_lo" style="width: auto;overflow: hidden;float: right;margin-top: 0;margin-right: 20px;">
+				<a href="javascript:;" style="text-decoration: none;"><i style="margin-right: 0;padding-right: 8px;"></i>北京</a>
+			</label>
+		</div> 
+		<div class="h_dizhi"></div>
+		
+		<div class="nav">
+			<ul> 
+				<li class="navmenu">
+					<a href="/html/list.html">
+						<span>All Products</span>
+						<span>全部产品</span>
+					</a>
+				</li>
+				<li class="navmenu" id="nav2" >
+					<a href="#">
+						<span>Cake Series</span>
+						<span>蛋糕系列</span>
+					</a>
+					<ul class="sub_nav" style="display: none;">
+						<li class="navtwo top" style="border-bottom:none;"><a href="#">经典系列</a></li>
+						<li class="navtwo" style="border-bottom:none;"><a href="#">法式系列</a></li>
+						<li class="navtwo" style="border-bottom:none;"><a href="#">儿童系列</a></li>
+						<li class="navtwo" style="border-bottom:none;"><a href="#">冰淇淋系列</a></li>
+						<li class="navtwo" style="border-bottom:none;"><a href="#">珍爱系列</a></li>
+						<li class="navtwo" style="border-bottom:none;"><a href="#">宠爱系列</a></li>
+						<li class="navtwo" style="border-bottom:none;"><a href="#">尊爱系列</a></li>
+					</ul>
+				</li>
+				<li class="navmenu">
+					<a href="#">
+						<span>Wagashi</span>
+						<span>零食糕点</span>
+					</a>
+				</li>
+				<li class="navmenu" style="border: none;">
+					<a href="#">
+						<span>About Us</span>
+						<span>关于我们</span>
+					</a>
+				</li>
+			</ul>	
+		</div>
+		<div class="h_phone">
+			<img src="/images/phone_icon.png" height="15">400-700-5999
+		</div>
+		<div class="h_navsearch">
+			<form id="searchform" name="psForm" method="GET" action="/searcg.php">
+				<input type="text" name="keywords" maxlength="80" length="20" style="color: #999">
+				<a href="#"></a>
+			</form>
+		</div><!--搜索框-->
+	</div>
+</div>
+
+</body>
+</html>

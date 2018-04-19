@@ -1,0 +1,259 @@
+var _DENGLU = window._DENGLU || (window.DENGLU || {}).widget || {};
+if(!_DENGLU.initialized) {
+    _DENGLU = {
+        url_prefix : "//www.ecopen.cn/",
+        static_url_prefix : "//www.ecopen.cn/statics/default/",
+        flags : {},
+        providers : {
+            Google : 1,
+            WindowsLive : 2,
+            Sina : 3,
+            Tencent : 4,
+            Sohu : 5,
+            Netease : 6,
+            Renren : 7,
+            Kaixin001 : 8,
+            Douban : 9,
+            Sdo : 10,
+            CM139 : 11,
+            Yahoo : 12,
+            QZone : 13,
+            Dream163 : 14
+        },
+        hasClass : function(obj, cName) {
+            return ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+        },
+        addClass : function(obj, cName) {
+            if(!_DENGLU.hasClass(obj, cName)) {
+                obj.className += " " + cName;
+            }
+        },
+        removeClass : function(obj, cName) {
+            if(_DENGLU.hasClass(obj, cName)) {
+                var reg = new RegExp('(\\s|^)' + cName + '(\\s|$)');
+                obj.className = obj.className.replace(reg, ' ');
+            }
+        },
+        show : function(obj) {
+            obj.style.display = "block";
+        },
+        hide : function(obj) {
+            obj.style.display = "none";
+        },
+        get : function(id) {
+            return document.getElementById(id);
+        },
+        withinElement : function(event, elem) {// copy from jquery
+            if(window.event) {
+                event = window.event;
+                if(event.type == "mouseout") {
+                    event.relatedTarget = event.toElement;
+                }
+                else if(event.type == "mouseover") {
+                    event.relatedTarget = event.fromElement;
+                }
+            }
+            var parent = event.relatedTarget;
+            while(parent && parent != elem) {
+                try {
+                    parent = parent.parentNode;
+                } catch (error) {
+                    parent = elem;
+                }
+            }
+            return parent == elem;
+        },
+        addStyle : function(css_content) {
+            var head = document.getElementsByTagName('head')[0];
+            var style = document.createElement('style');
+            style.type = 'text/css';
+
+            if(style.styleSheet) {
+                style.styleSheet.cssText = css_content;
+            }
+            else {
+                style.appendChild(document.createTextNode(css_content));
+            }
+            head.appendChild(style);
+        },
+        resizeIframe : function(from) {
+            var frame = _DENGLU.get("cross_domain");
+            if(!frame) {
+                return;
+            }
+            frame.src = ( from ? from : "http://" + window._domain) + "#" + $(document.body).height();
+        }
+    };
+    _DENGLU.initialized = true;
+}
+
+_DENGLU.loginWdgt = function(options) {
+    this.options = options || {};
+    var appid = options.appid;
+    if(!appid) {
+        return;
+    }
+    var timeHash = this.options.hash = new Date().getTime();
+
+    if(this.options.display == "popup") {
+        this.addStyle(this.options);
+
+        var buttonStyle = this.options.styletype;
+        if(this.options.styletype) {
+            buttonStyle = "dl_handle_" + this.options.styletype;
+        }
+        else {
+            buttonStyle = "dl_handle";
+        }
+        if(this.options.iframeflag) {
+            document.write('<a target="_self" href="javascript:;" id="dl_handle_' + timeHash + '" class="' + buttonStyle + '"></a>');
+        }
+        else {
+            var gointo = '<div id="dl_handle_' + timeHash + '" class="' + buttonStyle + '"><ul>';
+            if(this.options.medias) {
+                for(var i = 0, j = this.options.medias.length; i < j; i++) {
+                    var media = this.options.medias[i];
+                    gointo += '<li><img alt="' + media.name + '" src="' + _DENGLU.static_url_prefix + '/images/denglu_second_icon_' + media.id + '.gif"></li>';
+                }
+            }
+            gointo += '</ul></div>';
+            document.write(gointo);
+        }
+        var widget = this;
+        _DENGLU.get("dl_handle_" + timeHash).onclick = function(e) {
+            widget.showPop();
+        };
+        /*弹出框*/
+        var pop = document.createElement("div");
+        pop.id = "dl_pop_" + timeHash;
+        pop.style.display = "none";
+        pop.className = "dl_pop";
+        pop.innerHTML = '	<div id="dl_con_' + timeHash + '" class="dl_con">' + '		<a target="_self" href="javascript:;" class="dl_close" id="dl_close_' + timeHash + '"></a>' + '		<iframe id="dl_iframe_' + timeHash + '" name="dl_iframe" class="loading dl_iframe" allowTransparency="true" scrolling="no" frameborder="0" width="' + (this.options.width ? this.options.width == "auto" ? "100%" : this.options.width : 584) + '"' + (this.options.width == "auto" ? '' : ' height="' + (this.options.height ? (this.options.height-0+10) : 100) + '"') + '></iframe>' + '	</div>' + '	<div id="dl_block_' + timeHash + '" class="dl_block"></div>';
+        var oldLoad = window.onload;
+        window.onload = function() {
+            if(oldLoad && typeof oldLoad == "function") {
+                try {
+                    oldLoad();
+                } catch (e) {
+                }
+            }
+            document.body.appendChild(pop);
+            _DENGLU.get("dl_close_" + timeHash).onclick = function(e) {
+                _DENGLU.hide(_DENGLU.get("dl_pop_" + timeHash));
+            };
+        };
+    }
+    else {
+        var height = options.height || "100";
+        var width = options.width == "auto" ? "100%" : options.width || "584";
+        var timeHash = this.options.hash = new Date().getTime();
+
+        document.write('<iframe id="denglu_login_' + timeHash + '" name="denglu_login_' + timeHash + '" src="' + _DENGLU.url_prefix + 'connect/login?appid=' + appid + '&domain=' + document.domain + (this.options.widget ? '&widget=' + this.options.widget : '') + (this.options.size ? '&size=' + this.options.size : '') + (this.options.version ? '&v=' + this.options.version : '') + '" allowTransparency="true" scrolling="no" frameborder="0" width="' + (width-0+20) + '"' + (options.width == "auto" ? '' : ' height="' + (height-0+20) + '"') + '></iframe>');
+    }
+
+    if(options.autoresize) {
+        _DENGLU.resizeIframe();
+        var iframeId = this.options.display == "popup" ? "dl_iframe_" + self.options.hash : "denglu_login_" + self.options.hash;
+
+        function resizeWidget() {
+            try {
+                var href = window.frames[iframeId].frames["cross_domain"].location.href;
+                var height = parseInt(href.substring(href.lastIndexOf('#') + 1));
+                if(height) {
+                    var frame = document.getElementById(iframeId);
+                    frame.style.height = height + "px";
+                    frame.height = height;
+                }
+            } catch (e) {
+            }
+        }
+
+        setInterval(resizeWidget, 200);
+    }
+};
+
+_DENGLU.loginWdgt.prototype = {
+    options : {},
+    showPop : function() {
+        var self = this;
+        if(_DENGLU.get("dl_iframe_" + this.options.hash) == null) {// TODO temp fix
+            var timeHash = this.options.hash;
+            var pop = document.createElement("div");
+            pop.id = "dl_pop_" + timeHash;
+            pop.style.display = "none";
+            pop.className = "dl_pop";
+            pop.innerHTML = '	<div id="dl_con_' + timeHash + '" class="dl_con">' + '		<a target="_self" href="javascript:;" class="dl_close" id="dl_close_' + timeHash + '"></a>' + '		<iframe id="dl_iframe_' + timeHash + '" name="dl_iframe" class="loading dl_iframe" allowTransparency="true" scrolling="no" frameborder="0" width="' + (this.options.width ? this.options.width == "auto" ? "100%" : this.options.width : 584) + '" height="' + (this.options.height ? this.options.height : 100) + '"></iframe>' + '	</div>' + '	<div id="dl_block_' + timeHash + '" class="dl_block"></div>';
+            document.body.appendChild(pop);
+            _DENGLU.get("dl_close_" + timeHash).onclick = function(e) {
+                _DENGLU.hide(_DENGLU.get("dl_pop_" + timeHash));
+            };
+        }
+        var pop = _DENGLU.get("dl_iframe_" + this.options.hash).getAttribute("src");
+        if(!pop) {
+            var url = _DENGLU.url_prefix + 'connect/login?appid=' + this.options.appid + '&domain=' + document.domain + (this.options.widget ? '&widget=' + this.options.widget : '') + (this.options.size ? '&size=' + this.options.size : '') + (this.options.version ? '&v=' + this.options.version : '');
+            _DENGLU.get("dl_iframe_" + this.options.hash).setAttribute("src", url);
+            _DENGLU.show(_DENGLU.get("dl_pop_" + this.options.hash));
+
+            if(_DENGLU.get("dl_iframe_" + this.options.hash).addEventListener) {
+                _DENGLU.get("dl_iframe_" + this.options.hash).addEventListener("load", function() {
+                    self.popLoaded(self.options.hash);
+                }, false);
+            }
+            else if(_DENGLU.get("dl_iframe_" + this.options.hash).attachEvent) {
+                _DENGLU.get("dl_iframe_" + this.options.hash).attachEvent("onload", function() {
+                    self.popLoaded(self.options.hash);
+                });
+            }
+
+            this.scroll_top = document.documentElement.scrollTop || document.body.scrollTop;
+            this.scroll_height = document.documentElement.scrollHeight;
+            this.client_height = window.innerHeight || document.documentElement.clientHeight;
+
+            _DENGLU.get("dl_block_" + this.options.hash).style.height = this.scroll_height + "px";
+            _DENGLU.get("dl_con_" + this.options.hash).style.top = this.scroll_top + this.client_height * 0.1 + "px";
+        }
+        else {
+            _DENGLU.show(_DENGLU.get("dl_pop_" + this.options.hash));
+        }
+    },
+    popLoaded : function(hash) {
+        try {
+            _DENGLU.get(this.id || "dl_iframe_" + hash).className = "";
+        } catch (e) {
+        }
+    },
+    addStyle : function(options) {
+        var style = "*{padding:0;margin:0;}" + "a.dl_handle{width:140px;height:48px;background:url(" + _DENGLU.static_url_prefix + (this.options.headerimage ? this.options.headerimage : "images/top_button.png") + ") no-repeat 0 0 ;display:block;float:right;margin-right:10px;margin-top:2px;}" + "a.dl_handle_hidden{display:none !important;}" + ".dl_pop{width:100%;top:0;left:0;z-index:1000000;position:absolute;}" + ".dl_close{background:url(" + _DENGLU.static_url_prefix + "images/close.gif) no-repeat 0 0 ; height:20px;position:absolute;top:6px;right:3px;width:20px;overflow:hidden;z-index:4;}" + ".dl_close:hover{background:url(" + _DENGLU.static_url_prefix + "images/close.gif) no-repeat -20px 0;}" + ".dl_block{top:0;left:0;z-index:1;width:100%;position:absolute;background-color:#000;opacity:0.5;-moz-opacity:0.5;filter:alpha(opacity=50)\9;}" + ".dl_con{width:" + (this.options.width ? this.options.width : 584) + "px;height:" + (this.options.height ? this.options.height : 100) + "px;padding:10px;margin:0 auto;z-index:2;position:relative;border:5px solid #707070; background:#FFF;}" + ".dl_con iframe.loading{margin-top:5px;margin-left:10px;background:transparent url(" + _DENGLU.static_url_prefix + "images/load_block.gif) no-repeat 400px 0;}" + ".dl_handle_1{width:150px;height:48px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/bottom1.gif) no-repeat; overflow: hidden; cursor:pointer;}" + ".dl_handle_1 ul{float:left; margin:24px 0 0 10px; *margin:26px 0 0 6px;}" + ".dl_handle_1 ul li{float:left; margin-right:6px;list-style:none;height:20px;line-height:20px;background:none;}" + ".dl_handle_1 ul li img{border:none;}" + ".dl_handle_2{width:130px;height:24px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/bottom2.gif) no-repeat; overflow: hidden; cursor:pointer;}" + ".dl_handle_2 ul{float:left; margin:2px 0 0 38px; _margin:4px 0 0 18px;}" + ".dl_handle_2 ul li{float:left; margin-right:3px;list-style:none;height:24px;line-height:24px;background:none;}" + ".dl_handle_2 ul li img{border:none;}" + ".dl_handle_3{width:37px;height:135px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/button_personal.png) 0px 0px no-repeat;position:absolute;top:30%;right:0px;}" + ".dl_handle_4{width:37px;height:135px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/button_personal.png) -50px 0px no-repeat;position:absolute;top:30%;right:0px;}" + ".dl_handle_5{width:37px;height:135px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/button_personal.png) -100px 0px no-repeat;position:absolute;top:30%;right:0px;}" + ".dl_handle_6{width:37px;height:135px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/button_personal.png) -150px 0px no-repeat;position:absolute;top:30%;right:0px;}" + ".dl_handle_7{width:37px;height:135px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/button_personal.png) -200px 0px no-repeat;position:absolute;top:30%;right:0px;}" + ".dl_handle_8{width:37px;height:135px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/button_personal.png) -250px 0px no-repeat;position:absolute;top:30%;right:0px;}" + ".dl_handle_i1{width:46px;height:190px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/ifame_entry.gif) 0px 0px no-repeat;position:absolute;top:30%;right:0px;}" + ".dl_handle_i2{width:46px;height:190px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/ifame_entry.gif) -209px 0px no-repeat;position:absolute;top:30%;right:0px;}" + ".dl_handle_i3{width:46px;height:190px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/ifame_entry.gif) -74px 0px no-repeat;position:absolute;top:30%;right:0px;}" + ".dl_handle_i4{width:46px;height:190px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/ifame_entry.gif) -143px 0px no-repeat;position:absolute;top:30%;right:0px;}" + ".dl_handle_i5{width:46px;height:190px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/ifame_entry.gif) -268px 0px no-repeat;position:absolute;top:30%;right:0px;}" + ".dl_handle_ic1{width:55px;height:24px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/oth_list322_p.gif) 0px -65px no-repeat;}" + ".dl_handle_ic2{width:109px;height:24px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/oth_list322_p.gif) 0px -96px no-repeat;}" + ".dl_handle_id1{width:55px;height:24px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/oth_list322_p.gif) 0px -129px no-repeat;}" + ".dl_handle_id2{width:109px;height:24px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/oth_list322_p.gif) 0px -162px no-repeat;}" + ".dl_handle_ia1{width:55px;height:24px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/oth_list322_p.gif) 0px 0px no-repeat;}" + ".dl_handle_ia2{width:109px;height:24px;display:block;background:url(" + _DENGLU.static_url_prefix + "images/oth_list322_p.gif) 0px -32px no-repeat;}";
+        _DENGLU.addStyle(style);
+    }
+};
+
+var options = {
+    appid : '1175343331'
+};
+options.display = '';
+options.styletype = '1';
+options.widget = '5';
+options.width = '308';
+options.height = '106';
+options.version = '1.0';
+
+var mediaList = [];
+mediaList[mediaList.length] = {
+    id : "13",
+    name : "QQ"
+}
+mediaList[mediaList.length] = {
+    id : "3",
+    name : "新浪微博"
+}
+mediaList[mediaList.length] = {
+    id : "16",
+    name : "淘宝"
+}
+mediaList[mediaList.length] = {
+    id : "18",
+    name : "支付宝"
+}
+options.medias = mediaList;
+new _DENGLU.loginWdgt(options);
