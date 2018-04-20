@@ -1,83 +1,61 @@
-<!-- 头部 -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>头部</title>
-</head>
-<body>
-	<div class="header">
-	<h1 class="h1">
-		<a href="/index.html">
-			<img src="/images/logo.png">
-		</a>
-	</h1>
-	<div class="head_right head_right_new">  <!--头部右边-->
-		<div class="h_login" style="margin-top: -8px;margin-bottom: 8px">
-			<label>
-				<a class="User" href="/html/login.html" style="text-decoration: none;">登录</a>
-				<a class="zhuce" href="/html/register.html" style="margin-left: 20px;text-decoration: none;">注册</a>
-			</label>
-			<span id="gouwuche" class="car" style="position: relative;">
-				<a href="/html/cart.html" style="text-decoration: none;">
-					<b id="count">0</b>件
-					<b id="car_price" style="position: absolute;top: -8px;left: 0;"></b>
-				</a>
-			</span>
-			<label id="dizhi_self" class="dizhi_lo" style="width: auto;overflow: hidden;float: right;margin-top: 0;margin-right: 20px;">
-				<a href="javascript:;" style="text-decoration: none;"><i style="margin-right: 0;padding-right: 8px;"></i>北京</a>
-			</label>
-		</div> 
-		<div class="h_dizhi"></div>
-		
-		<div class="nav">
-			<ul> 
-				<li class="navmenu">
-					<a href="/html/list.html">
-						<span>All Products</span>
-						<span>全部产品</span>
-					</a>
+<div class="header_new">
+	<div class="head_new">
+        <div class="logo_new" style="margin-top: 5px">
+        	<a href="/"><img src="http://www.iishang.com:80/image/logo.png" height="50"></a>
+        </div>
+        <div class="nav_new">
+        	<ul class="nav_top">
+				<li class="myas_li" id="center_li">
+					<a href="http://m.iishang.com/user/center.do">个人中心</a>
 				</li>
-				<li class="navmenu" id="nav2" >
-					<a href="#">
-						<span>Cake Series</span>
-						<span>蛋糕系列</span>
-					</a>
-					<ul class="sub_nav" style="display: none;">
-						<li class="navtwo top" style="border-bottom:none;"><a href="#">经典系列</a></li>
-						<li class="navtwo" style="border-bottom:none;"><a href="#">法式系列</a></li>
-						<li class="navtwo" style="border-bottom:none;"><a href="#">儿童系列</a></li>
-						<li class="navtwo" style="border-bottom:none;"><a href="#">冰淇淋系列</a></li>
-						<li class="navtwo" style="border-bottom:none;"><a href="#">珍爱系列</a></li>
-						<li class="navtwo" style="border-bottom:none;"><a href="#">宠爱系列</a></li>
-						<li class="navtwo" style="border-bottom:none;"><a href="#">尊爱系列</a></li>
-					</ul>
-				</li>
-				<li class="navmenu">
-					<a href="#">
-						<span>Wagashi</span>
-						<span>零食糕点</span>
-					</a>
-				</li>
-				<li class="navmenu" style="border: none;">
-					<a href="#">
-						<span>About Us</span>
-						<span>关于我们</span>
-					</a>
-				</li>
-			</ul>	
-		</div>
-		<div class="h_phone">
-			<img src="/images/phone_icon.png" height="15">400-700-5999
-		</div>
-		<div class="h_navsearch">
-			<form id="searchform" name="psForm" method="GET" action="/searcg.php">
-				<input type="text" name="keywords" maxlength="80" length="20" style="color: #999">
-				<a href="#"></a>
-			</form>
-		</div><!--搜索框-->
-	</div>
+                <li id="register_li">
+                	<a href="javascript:void(0);" onclick="">注销</a>
+                </li>
+            	<li id="login_li">
+					<a href="javascript:void(0);">登录</a>
+                </li>
+                <div class="clear"></div>
+            </ul>
+            <!-- 首页icon 开始 -->
+            <div class="navBar">
+                <ul class="nav clearfix">
+                    <li class="m on">
+                    <h3><a href="/" title="首页">首页</a></h3>
+                    </li>
+                    <li class="m">
+                    <h3><a href="javascript:void(0);">订阅鲜花</a></h3>
+                    	<ul class="sub">
+                            <li><a href="http://m.iishang.com/product/detail.do?id=12000699">缤纷设计</a></li>
+                            <li><a href="http://m.iishang.com/product/detail.do?id=12000700">玫瑰之约</a></li>
+                            <li><a href="http://m.iishang.com/product/detail.do?id=12000701">轻奢甄选</a></li>
+                    	</ul>
+                    </li>
+					<li class="m">
+						<h3><a href="javascript:void(0);">礼品鲜花</a></h3>
+						<ul class="sub">
+							<li><a href="http://m.iishang.com/product/detail.do?id=12000671">极速达</a></li>
+							<li><a href="http://m.iishang.com/product/detail.do?id=12000698">永生玫瑰</a></li>
+							<li><a href="http://m.iishang.com/product/detail.do?id=12000677">经典玫瑰魔盒</a></li>	
+						</ul>
+					</li>
+					<li class="m">
+						<h3><a href="javascript:void(0);">绿植多肉</a></h3>
+						<ul class="sub">
+							<li><a href="https://h5.youzan.com/v2/goods/3nmou1ng7iiq&#9;9?redirect_count=2" target="_blank">观赏植物</a></li>
+							<li><a href="https://h5.youzan.com/v2/goods/2ogftblqiirk1" target="_blank">吸水盆栽</a></li>
+						</ul>
+					</li>
+					<li class="m">
+						<h3><a href="javascript:void(0);">花边小物</a></h3>
+						<ul class="sub">
+							<li><a href="https://h5.youzan.com/v2/goods/3f2sojyxsjfqp" target="_blank">手机壳</a></li>
+							
+							<li><a href="http://m.iishang.com/product/detail.do?id=12000691">花瓶</a></li>
+						</ul>
+					</li>
+                </ul>
+            </div>
+            <!-- 首页icon 结束 -->
+        </div>
+    </div>
 </div>
-
-</body>
-</html>

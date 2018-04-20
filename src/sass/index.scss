@@ -1,4 +1,76 @@
-*{margin:0;padding:0;}
-body,html{
-	min-height: 100%;
+
+/*列表样式*/
+.home_main {
+    background-color: #fff;
+    .main_mid {
+	    max-width: 1000px;
+	    margin: 1px auto;
+	    padding-bottom: 50px;
+	    .main_kuai {
+		    width: 100%;
+		    .kuai_title {
+			    text-align: center;
+			    margin: 30px 0;
+			    color: #717171;
+			    font-size: 30px;
+			}
+			.kuai_pic  {
+			    width: 100%;
+			    .k_left ,.k_right{
+				    float: left;
+				    width: 48%;
+				    a{
+				    	img {
+						    border: 0 none;
+						    vertical-align: middle;
+						}
+				    }
+				    .pic_text {
+					    padding: 15px 15px 10px;
+					    border-bottom: 1px solid #d4d4d4;
+					    .dpby_big {
+						    display: inline-block;
+						    color: #000;
+						    font-size: 26px;
+						}
+						.dpby_small {
+						    font-size: 16px;
+						    color: #727272;
+						    display: inline-block;
+						    margin-left: 15px;
+						}
+					}
+				}
+				.k_right {
+				    float: right;
+				    width: 48%;
+				}
+				.clear {
+				    clear: both;
+				}
+			}
+
+		}
+	}
+}
+
+
+/*客服样式*/
+.bkhome {
+    position: fixed;
+    bottom: 28%;
+    right: 10px;
+    width: 60px;
+    /* border-radius: 100%; */
+    z-index: 100;
+    background: #fff;
+    overflow: hidden;
+    z-index: 100000;
+    background: transparent;
+    a{
+    	img {
+		    border: 0 none;
+		    vertical-align: middle;
+		}
+    }
 }
