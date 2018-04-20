@@ -1,13 +1,21 @@
 {
   "name": "aishang",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "*需要完成功能：*",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoxiaoxiaoxie/H51801.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaoxiaoxiaoxie/H51801/issues"
+  },
+  "homepage": "https://github.com/xiaoxiaoxiaoxie/H51801#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
