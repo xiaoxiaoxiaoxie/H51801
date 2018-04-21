@@ -1,5 +1,5 @@
-require(["/js/config.js"],function() {
-	require(["jquery","cookie","load"],function($){
+require(["config"],function() {
+	require(["jquery","cookie","load"],function($,cookie){
 		
 		/* 验证注册的手机号是否被占用 */
 		// 标记手机号是否被占用

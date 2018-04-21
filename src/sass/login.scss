@@ -1,0 +1,143 @@
+body {
+    overflow-x: hidden;
+    color: #555;
+    font-size: 15px;
+    font-family: "黑体",Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+	.am-g{
+		margin: 0 auto;
+		max-width: 670px;
+		#form1{
+			margin: 0 auto;
+			padding: 10px;
+			width: 100%;
+			box-sizing: border-box;
+			.am-text-center{
+				text-align: center !important;
+				img {
+				    border: 0 none;
+				    vertical-align: middle;
+				}
+				.logo_text {
+				    margin-top: 10px;
+				    color: #fe5478;
+				    font-size: 16px;
+				}
+			}
+			.login_logo {
+			    margin: 40px 0;
+			}
+			.am-u-sm-12 {
+				padding: 8px 0;
+				position: relative;
+			}
+			.form_box{
+				width: 670px;
+				height: 370px;
+				.am-pad-none{
+					width: 100%;
+					height: 40px;
+					line-height: 40px;
+					border-bottom: 1px solid #f2f2f2;
+					.am-u-sm-1 {
+					    width: 8.33333333%;
+					    float: left;
+					}
+					.am-u-sm-5 {
+					    width: 41.66666667%;
+					    float: left;
+					}
+					.zc_right{
+						float: right;
+						margin-right: 20px;
+						box-sizing: border-box;
+					}
+					.am-u-sm-2{
+						margin-left: 20px;
+						width: 100px;
+						height: 40px;
+						line-height: 40px;
+						float: left;
+					}
+					.am-u-sm-10{
+						float: left;
+						width: 503px;	
+						position: relative;
+						input{
+							display:inline-block;
+							width: 100%;
+							border: none;
+							height: 30px;
+							line-height: 30px;
+						    font-size: 14px;
+						    border: 0;
+						    outline: none;
+						}
+						img.captcha-image {
+						    cursor: pointer;
+						    position: absolute;
+						    right: 0px;
+						    top: -7px;
+						    color: #fff;
+						    display: inline-block;
+						    /* padding: 4px 8px; */
+						    margin-bottom: 5px;
+						    font-size: 14px;
+						    border-radius: 4px;
+						    width: 86px;
+						    height: 37px;
+						    line-height: 37px;
+						    text-align: center;
+						}
+						.posi_eye {
+						    position: absolute;
+						    right: 20px;
+						    top: 10px;
+						}
+					}
+					.reglogbtn {
+					    padding: 10px 0;
+					    font-size: 15px;
+					    border-radius: 3px;
+					    background-color: #fe5478;
+					    border: 1px solid #fe5478;
+					    color: #fff;
+					    margin-top: 10px;
+					}
+					.am-btn-block {
+					    display: block;
+					    width: 100%;
+					    padding-left: 0;
+					    padding-right: 0;
+					}
+				}
+				.border_none{
+					border: none;
+					height: 40px;
+					line-height: 40px;
+				}
+				.reglog_tips {
+				    height: 20px;
+				    line-height: 20px;
+				    .am-u-sm-6 {
+					    width: 40%;
+					    float: left;
+					}
+					div{
+						a{
+							font-size: 13px;
+					    	color: #a8a8a8;
+					    	cursor: pointer;
+						}
+					}
+					.am-text-right {
+						float: right;
+					    text-align: right !important;
+					    margin-right: 20px;
+					    box-sizing: border-box;
+					}
+				}
+			}
+		}
+	}
+}
