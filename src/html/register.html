@@ -27,22 +27,26 @@
 	                        <img src="/images/icon_tel.png" width="16">
 	                    </div>
 	                    <div class="am-u-sm-10">
-	                        <input id="txt_phone" type="tel" value="" name="userphone" placeholder="手机号码" maxlength="20">
+	                        <input id="txt_phone" type="text" value="" name="phone" placeholder="手机号码" maxlength="20">
+	                        <span id="useridmsg"></span> 
 	                    </div>
+	                    
 	                </div>
-	                               
+	                              
 	                <div class="am-u-sm-12 am-pad-none reg_telpswyzm">
 	                    <div class="am-u-sm-2">
 	                        <img src="/images/icon_psw.png" width="16">
 	                    </div>
 	                    <div class="am-u-sm-10">
-	                        <input type="password" id="pwd" value="" placeholder="账号密码" maxlength="16" onkeyup="value=value.replace(/[^u4E00-u9FA5wxyz]/g,'')">
+	                        <input type="password" id="pwd" name="password" value="" placeholder="账号密码" maxlength="16" onkeyup="value=value.replace(/[^u4E00-u9FA5wxyz]/g,'')">
+	                        <span id="password"></span>
 	                    </div>
 	                    <span class="posi_eye"><img class="posi_eye_img" src="/images/icon_psweye.png" width="18"></span>
 	                </div>
+	                
 
 	                <div class="am-u-sm-12 am-pad-none border_none">
-	                    <button type="button" id="btn_regist" class="am-btn-block reglogbtn">注册</button>
+	                    <input type="submit" id="btn_regist" class="am-btn-block reglogbtn" value="注册"></input>
 	                </div>
 	                <div class="am-u-sm-12 am-pad-none reglog_tips border_none">
 	                    <div class="am-u-sm-6">
@@ -56,7 +60,21 @@
 	        </div>
         </form>
     </div>
-	
+
+    <!-- 提示框 -->
+    <div class="am-u-sm-12 foamModal" id="dlg_tip_info" style="width: 400px; margin-left: -200px; display: none;">
+	    <div class="am-u-sm-12 foamModalHead">提示
+	    	<img src="/images/cha_red.png" width="15" class="foamModalHide" >
+	    </div>
+	    <div class="am-u-sm-12 foamModalInput">
+	        <span id="tip_info">对不起，您输入的手机号格式不正确!</span>
+	    </div>
+	    <a href="javascript:" class="am-u-sm-12 foamModalBtn qdBtn" style="border-radius:0 0 15px 15px;">
+	        确定
+	    </a>
+	</div>
+	<!-- 遮罩层 -->
+	<div class="foamZcc" style="display: none;"></div>
 	
 	</div>
 	<!-- 尾部 -->

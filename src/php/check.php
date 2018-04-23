@@ -1,5 +1,5 @@
 <?php 
-
+	// 请求头,跨域
 	header("Access-Control-Allow-Origin:*");
 	
 	// 获取待注册的用户名
@@ -14,7 +14,7 @@
 	mysql_query("set names 'utf8'");
 
 	// 选择数据库
-	mysql_select_db("h51710");
+	mysql_select_db("aishang");
 	// 创建查询语句
 	$sql = "SELECT COUNT(*) FROM users WHERE phone='$phone'";
 	// 执行SQL语句，返回执行查询结果集

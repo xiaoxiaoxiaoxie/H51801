@@ -21,45 +21,46 @@
 	            <div class="logo_text">让喜欢成为习惯&nbsp;&nbsp;爱尚<sup>®</sup>订阅鲜花</div>
 	        </div>
 	        <div class="form_box">
-	            
-	                <div class="am-u-sm-12 am-pad-none reg_telpswyzm">
-	                    <div class="am-u-sm-2">
-	                        <img src="/images/icon_tel.png" width="16">
-	                    </div>
-	                    <div class="am-u-sm-10">
-	                        <input id="txt_phone" type="tel" value="" name="userphone" placeholder="手机号码" maxlength="20">
-	                    </div>
-	                </div>
-	                               
-	                <div class="am-u-sm-12 am-pad-none reg_telpswyzm">
-	                    <div class="am-u-sm-2">
-	                        <img src="/images/icon_psw.png" width="16">
-	                    </div>
-	                    <div class="am-u-sm-10">
-	                        <input type="password" id="pwd" value="" placeholder="账号密码" maxlength="16" onkeyup="value=value.replace(/[^u4E00-u9FA5wxyz]/g,'')">
-	                    </div>
-	                    <span class="posi_eye"><img class="posi_eye_img" src="/images/icon_psweye.png" width="18"></span>
-	                </div>
+                <div class="am-u-sm-12 am-pad-none reg_telpswyzm">
+                    <div class="am-u-sm-2">
+                        <img src="/images/icon_tel.png" width="16">
+                    </div>
+                    <div class="am-u-sm-10">
+                        <input id="txt_phone" type="text" value="" name="phone" placeholder="手机号码" maxlength="20">
+                        <span id="useridmsg"></span> 
+                    </div>
+                </div>
+                               
+                <div class="am-u-sm-12 am-pad-none reg_telpswyzm">
+                    <div class="am-u-sm-2">
+                        <img src="/images/icon_psw.png" width="16">
+                    </div>
+                    <div class="am-u-sm-10">
+                        <input type="password" name="password" id="pwd" value="" placeholder="账号密码" maxlength="16" onkeyup="value=value.replace(/[^u4E00-u9FA5wxyz]/g,'')">
+                        <span id="password"></span>
+                    </div>
+                    <span class="posi_eye"><img class="posi_eye_img" src="/images/icon_psweye.png" width="18"></span>
+                </div>
 
-	                <div class="am-u-sm-12 border_none am-pad-none">
-	                    <div class="am-u-sm-1">&nbsp;</div>
-	                    <div class="am-u-sm-5">
-	                        <button type="button" id="btn_pwd_login" class="am-btn-block reglogbtn">登录</button>
-	                    </div>
-	                    <div class="am-u-sm-5 zc_right">
-	                        <button type="button" class="am-btn-block reglogbtn">注册</button>
-	                    </div>
-	                    <div class="am-u-sm-1">&nbsp;</div>
-	                </div>
-	                <div class="am-u-sm-12 am-pad-none reglog_tips border_none">
-	                    <div class="am-u-sm-6">
-	                        <a href="javascript:;" onclick="toYzmLogin()">短信快捷登录</a>
-	                    </div>
-	                    <div class="am-u-sm-6 am-text-right">
-	                        <a href="javascript:;" onclick="toPwdLogin();">重置密码</a>
-	                    </div>
-	                </div>
-	            
+                <div class="am-u-sm-12 border_none am-pad-none">
+                    <div class="am-u-sm-1">&nbsp;</div>
+                    <div class="am-u-sm-5">
+                        <input type="submit" id="btn_pwd_login" class="am-btn-block reglogbtn" value="登录"></input>
+                    </div>
+                    <div class="am-u-sm-5 zc_right">
+                        <button type="button" class="am-btn-block reglogbtn">注册</button>
+                    </div>
+                    <div class="am-u-sm-1">&nbsp;</div>
+                </div>
+                <div class="am-u-sm-12 am-pad-none reglog_tips border_none">
+                    <div class="am-u-sm-6">
+                        <a href="javascript:;" onclick="toYzmLogin()">短信快捷登录</a>
+                    </div>
+                    <div class="am-u-sm-6 am-text-right">
+                        <a href="javascript:;" onclick="toPwdLogin();">重置密码</a>
+                    </div>
+                </div>
+            
 	        </div>
         </form>
     </div>

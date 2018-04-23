@@ -1,5 +1,6 @@
 require(["config"], function(){
 	require(["jquery", "template","carousel","load"], function($,template,carousel){
+		// 轮播图
 		$(".main_banner").carousel({//调用原生的carousel方法
 			imgs:[
 			{src:"/images/banner1.jpg"},
@@ -12,5 +13,37 @@ require(["config"], function(){
 			duration:3000,
 			type:"fade"
 		});
+
+
+		/*// 客服
+	      $(function () {
+	      	
+		    $("#img_kf").mouseenter(function () {
+		        $(this).attr("src","/images/kf2.png");
+		    });
+
+		    $("#img_kf").mouseleave(function () {
+		        $(this).attr("src","/images/kf.png");
+		    });
+
+		      $("#img_kf").mouseenter(function () {
+		        $(this).attr("src","/images/kf2.png");
+		    });
+
+		      let NTKF_PARAM = {
+		        siteid:"kf_9412",		            
+		        settingid:"kf_9412_1474855760539",	
+		        uid:"",		                
+		        uname:"",		    
+		        isvip:"0",                       
+		        userlevel:"1",		              
+		        erpparam:""                  
+		    }
+
+		    console.log(NTKF_PARAM);
+
+	      });*/
+	   
 	});
+
 });
