@@ -28,7 +28,8 @@ require(["config"],function() {
 			});
 
 
-		//
+		//密码验证
+		
 		$('#pwd').blur(function () {
 			if($("#pwd").val().length<6){
 			 	$("#password").text("密码长度不符合要求");
@@ -37,6 +38,20 @@ require(["config"],function() {
 				//*************
 				$("#password").text("密码格式正确");
 				isExist=false;
+
+				  //验证两次密码是否一致
+				$("#pwd2").blur(function () {
+				    if($("#pwd").val() !=  $("#pwd2").val()) { 
+					   $("#password2").text("两次密码不一致");
+					   	isExist=true;//不往下执行
+
+						//********************
+					   console.log('1');
+				     }else { 
+				  		$("#password2").text("两次密码一致");
+					    isExist = false;
+				   } 
+				});
 			}
 		});
 		/* 提交注册表单，注册用户 */

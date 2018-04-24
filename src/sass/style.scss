@@ -3,6 +3,12 @@ a{text-decoration: none;}
 ul, ol, li {
     list-style-type: none;
 }
+hr, ol, p, pre, ul {
+    margin: 0 0 1.6rem 0;
+}
+b, strong {
+    font-weight: 700;
+}
 img {
     border: 0 none;
     vertical-align: middle;

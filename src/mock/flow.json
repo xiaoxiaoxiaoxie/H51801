@@ -1,0 +1,13 @@
+{
+	"res_code":"0",
+	"res_error":"",
+	"res_body":{
+		"products":[
+			{"pid":2,"img":"/images/picture2017032901.jpg"},
+			{"pid":3,"img":"/images/picture2017032902.jpg"},
+			{"pid":4,"img":"/images/picture-bottom-left.jpg"},
+			{"pid":5,"img":"/images/picture-bottom-right01.jpg"},
+			{"pid":6,"img":"/images/picture-bottom-right02.jpg"}
+		]
+	}
+}

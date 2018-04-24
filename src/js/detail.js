@@ -1,17 +1,17 @@
-require(["/js/config.js"],function () {
-	require(["jquery","cookie","load"],function($){
-		$(".attrs0 span").mouseenter(function(){
-			$(".attrs0 .h_size").css("display","block");
-		});
-		$(".attrs0 span").mouseleave(function(){
-			$(".attrs0 .h_size").css("display","none");
-		});
-		
-		$(".attrs span").mouseenter(function(){
-			$(".attrs .h_size").css("display","block");
-		});
-		$(".attrs span").mouseleave(function(){
-			$(".attrs .h_size").css("display","none");
+require(["config"],function () {
+	require(["jquery","template","cookie","carousel","load"],function($,template,cookie,carousel){
+		// 轮播图
+		$(".deta_banner").carousel({//调用原生的carousel方法
+			imgs:[
+			{src:"/images/deta_banner3.jpg"},
+			{src:"/images/deta_banner2.jpg"},
+			{src:"/images/deta_banner4.jpg"},
+			{src:"/images/deta_banner6.jpg"}
+			],
+			width:640,//图片宽
+			height:640,
+			duration:3000,
+			type:"fade"
 		});
 	});
 });

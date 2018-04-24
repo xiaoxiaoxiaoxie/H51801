@@ -26,7 +26,7 @@
 .xmcarousel .pages {
 	height: 20px;
 	position: absolute;
-	bottom: 0;
+	bottom: 38px;
 	padding-left:47%;
 	box-sizing:border-box; 
 }

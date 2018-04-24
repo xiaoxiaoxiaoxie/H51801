@@ -11,9 +11,16 @@ require(["config"], function(){
 			width:1263,//图片宽
 			height:333,
 			duration:3000,
-			type:"fade"
+			type:"fade" 
 		});
 
+		// 使用模板引擎
+		$.getJSON("/mock/flow.json", function(data){
+			// 使用 artTemplate 渲染
+			let html = template("prod_temp", {products : data.res_body.products});
+			// 显示
+			$(".kuai_pic").prepend(html);
+		});
 
 		/*// 客服
 	      $(function () {
