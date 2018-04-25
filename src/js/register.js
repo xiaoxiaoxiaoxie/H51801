@@ -46,7 +46,6 @@ require(["config"],function() {
 					   	isExist=true;//不往下执行
 
 						//********************
-					   console.log('1');
 				     }else { 
 				  		$("#password2").text("两次密码一致");
 					    isExist = false;

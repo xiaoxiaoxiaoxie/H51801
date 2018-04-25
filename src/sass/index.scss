@@ -14,9 +14,9 @@
 			    color: #717171;
 			    font-size: 30px;
 			}
-			.kuai_pic  {
+			.kuai_pic1,.kuai_pic2  {
 			    width: 100%;
-			    .k_left ,.k_right{
+			    .k_left{
 				    float: left;
 				    width: 48%;
 				    a{
@@ -40,14 +40,19 @@
 						    margin-left: 15px;
 						}
 					}
-				}
-				.k_right {
-				    float: right;
-				    width: 48%;
+
 				}
 				.clear {
 				    clear: both;
 				}
+				.k_left2{
+					margin-top: 10px;
+					margin-bottom: 10px;
+				}
+			}
+			.kuai_pic1>div:nth-child(1),.kuai_pic2>[class=right2]  {
+			    float: right;
+			    width: 48%;
 			}
 
 		}

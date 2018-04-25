@@ -14,14 +14,29 @@ require(["config"], function(){
 			type:"fade" 
 		});
 
-		// 使用模板引擎
+		// 使用模板引擎1
 		$.getJSON("/mock/flow.json", function(data){
 			// 使用 artTemplate 渲染
 			let html = template("prod_temp", {products : data.res_body.products});
 			// 显示
-			$(".kuai_pic").prepend(html);
+			$(".kuai_pic1").prepend(html);
 		});
 
+		// 使用模板引擎2
+		$.getJSON("/mock/flowTwo.json", function(data){
+			// 使用 artTemplate 渲染
+			let html = template("prod_tempTwo", {products : data.res_body.products});
+			// 显示
+			$(".kuai_pic2>.left2").prepend(html);
+		});
+
+		// 使用模板引擎3
+		$.getJSON("/mock/flowTh.json", function(data){
+			// 使用 artTemplate 渲染
+			let html = template("prod_tempth", {products : data.res_body.products});
+			// 显示
+			$(".kuai_pic2>.right2").prepend(html);
+		});
 		/*// 客服
 	      $(function () {
 	      	

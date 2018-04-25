@@ -1,0 +1,13 @@
+{
+	"res_code":"0",
+	"res_error":"",
+	"res_body":{
+		"products":[
+			{"pid":0,"bit":"首页","title":{"tone":"","ttwo":""}},
+			{"pid":1,"bit":"订阅鲜花","title":{"tone":"缤纷设计","ttwo":"玫瑰之约"}},
+			{"pid":2,"bit":"礼品鲜花","title":{"tone":"极速达","ttwo":"永生玫瑰"}},
+			{"pid":3,"bit":"绿植多肉","title":{"tone":"观赏植物","ttwo":"吸水盆栽"}},
+			{"pid":4,"bit":"花边小物","title":{"tone":"手机壳","ttwo":"花瓶"}}
+		]
+	}
+}

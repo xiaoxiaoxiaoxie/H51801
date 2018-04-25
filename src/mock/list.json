@@ -1,12 +1,15 @@
 {
-	"res_code":0,//code为0时
-	"res_error":"",//error没有错误信息
+	"res_code":0,
+	"res_error":"",
 	"res_body":{
-		"data":[
-			{"id":1, "title":"商品1", "price": 999, "img":"xxx1.jpg"},
-			{"id":2, "title":"商品2", "price": 888, "img":"xxx2.jpg"},
-			{"id":3, "title":"商品3", "price": 666, "img":"xxx3.jpg"},
-			{"id":4, "title":"商品4", "price": 333, "img":"xxx4.jpg"}
+		"products":[
+			{
+				"id":1,
+				"shangping":{
+					"bit1":{"title":"情迷戴安娜", "price": 169},
+					"bit2":{"title":"明艳雪山", "price": 358}
+				}
+			}
 		]
 	}
 }

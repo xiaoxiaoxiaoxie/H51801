@@ -3,11 +3,9 @@
 	"res_error":"",
 	"res_body":{
 		"products":[
-			{"pid":2,"img":"/images/picture2017032901.jpg"},
-			{"pid":3,"img":"/images/picture2017032902.jpg"},
-			{"pid":4,"img":"/images/picture-bottom-left.jpg"},
-			{"pid":5,"img":"/images/picture-bottom-right01.jpg"},
-			{"pid":6,"img":"/images/picture-bottom-right02.jpg"}
+			{"pid":2,"title1":"缤纷设计","title2":"似锦繁花，五种不同花材，缤纷多样","img":"/images/picture2017032901.jpg"},
+			{"pid":3,"title1":"玫瑰之约","title2":"高贵绚丽，每周一束玫瑰，优雅绽放","img":"/images/picture2017032902.jpg"}
+		
 		]
 	}
 }

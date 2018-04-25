@@ -1,5 +1,6 @@
 /* 加载头部尾部模块 */
-define(["jquery","cookie"], function($,cookie){
+
+define(["jquery","cookie","template"], function($,cookie,template){
 	$.ajax({
 		url:"/html/include/header.html",
 		type:"get",
@@ -17,23 +18,32 @@ define(["jquery","cookie"], function($,cookie){
 				});
 			}
 
-			//导航二级列表
-			/* 鼠标移入显示二级菜单 */
-			$("ul.nav>li:lt(5):gt(0)").hover(function(){
-				// mouseenter
-				$(this).children("ul.sub").show();
-			}, function(){
-				// mouseleave
-				$(this).children("ul.sub").hide();
+			// 使用模板引擎
+			$.getJSON("/mock/header.json", function(data){
+				// 使用 artTemplate 渲染
+				let html = template("prod_tempnav", {products : data.res_body.products});
+				// 显示
+				$(".nav").append(html);
+
+				//导航二级列表
+				/* 鼠标移入显示二级菜单 */
+				$("ul.nav>li:lt(5):gt(0)").hover(function(){
+					// mouseenter
+					$(this).children("ul.sub").show();
+				}, function(){
+					// mouseleave
+					$(this).children("ul.sub").hide();
+				});
+				$("ul.sub").hover(function(){
+					// mouseenter
+					$(this).show();
+				}, function(){
+					// mouseleave
+					$(this).hide();
+				});
 			});
-			$("ul.sub").hover(function(){
-				// mouseenter
-				$(this).show();
-			}, function(){
-				// mouseleave
-				$(this).hide();
-			});
-		
+
+			
 		}
 	});
 		

@@ -13,5 +13,31 @@ require(["config"],function () {
 			duration:3000,
 			type:"fade"
 		});
+
+		// 模板引擎
+		$.getJSON("/mock/list.json",function(data){
+			
+			// 使用 artTemplate 渲染
+			let html = template("art_tempt", {products : data.res_body.products});
+			// 显示
+			$(".deta").prepend(html);
+
+			$(".right").on("click"," .span1,.span2",function () {
+				/*
+				$(this).css("color","skyblue");*/
+				let zu = $(this).parents(".right");
+					
+					if(zu.hasClass(".span1")){
+						$(".span2").css("color","#999");
+						$(".span1").css("color","skyblue");
+					}
+				
+					else if(zu.hasClass(".span2")){
+						$(".span1").css("color","#999");
+						$(".span2").css("color","skyblue");
+					}
+
+			});
+		});
 	});
 });

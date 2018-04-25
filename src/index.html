@@ -22,22 +22,8 @@
             	<div class="kuai_title">
                 	一周一花&nbsp;订阅未知的鲜美生活
                 </div>
-                <div class="kuai_pic">
-
-                  <!--    art-Template 模板
-                     <script type="text/html" id="prod_temp">
-                         {{ each products prod }}
-                         <a href="single.html">
-                             <li>
-                                 <img src="{{prod.img}}" class="img-responsive"/>
-                                 <span class="btn5">${{prod.price.toFixed(2)}}</span>
-                                 <p>{{prod.title}}</p>
-                                 <span class="id" style="display:none">{{prod.pid}}</span>
-                             </li>
-                         </a>
-                         {{/each}}
-                     </script> -->
-
+                <div class="kuai_pic1">
+                    <!-- 模板引擎 -->
                     <script type="text/html" id="prod_temp">
                         {{each products prod}}
                             <div class="k_left">
@@ -45,41 +31,13 @@
                                     <img src="{{prod.img}}" class="img-responsive">
                                 </a>
                                 <div class="pic_text">
-                                    <span class="dpby_big">缤纷设计</span>
-                                    <span class="dpby_small">似锦繁花，五种不同花材，缤纷多样</span>
-                                </div>
-                            </div>
-                            <div class="k_right">
-                                <a href="/html/detail.html">
-                                    <img src="{{prod.img}}" class="img-responsive">
-                                </a>
-                                
-                                <div class="pic_text">
-                                    <span class="dpby_big">玫瑰之约</span>
-                                    <span class="dpby_small">高贵绚丽，每周一束玫瑰，优雅绽放</span>
+                                    <span class="dpby_big">{{prod.title1}}</span>
+                                    <span class="dpby_small">{{prod.title2}}</span>
                                 </div>
                             </div>
                         {{/each}}
                     </script>
-                	<!-- <div class="k_left">
-                            <a href="/html/detail.html">
-                                <img src="/images/picture2017032901.jpg">
-                            </a>
-                            <div class="pic_text">
-                                <span class="dpby_big">缤纷设计</span>
-                                <span class="dpby_small">似锦繁花，五种不同花材，缤纷多样</span>
-                            </div>
-                        </div>
-                        <div class="k_right">
-                            <a href="/html/detail.html">
-                                <img src="/images/picture2017032902.jpg">
-                            </a>
-                            
-                            <div class="pic_text">
-                                <span class="dpby_big">玫瑰之约</span>
-                                <span class="dpby_small">高贵绚丽，每周一束玫瑰，优雅绽放</span>
-                            </div>
-                        </div> -->
+                	
                     <div class="clear"></div>
                 </div>
             </div>
@@ -87,37 +45,35 @@
             	<div class="kuai_title">
                 	产品活动
                 </div>
-                <div class="kuai_pic">
-                    <script type="text/html" id="prod_temp">
-                        {{each products prod}}
-                            <div class="k_left">
-                                <a href="/html/detail.html">
-                                    <img src="{{prod.img}}" class="img-responsive">
-                                </a>
-                            </div>
-                            <div class="k_right">
-                                <a href="/html/detail.html">
-                                    <img src="{{prod.img}}" class="img-responsive">
-                                </a>
-                                <a href="/html/detail.html">
-                                    <img src="/images/picture-bottom-right02.jpg" style="margin-top:26px;">
-                                </a>
-                            </div>
-                        {{/each}}
-                    </script>
-                	<!-- <div class="k_left">
-                            <a href="/html/detail.html">
-                                <img src="/images/picture-bottom-left.jpg">
-                            </a>
-                        </div>
-                        <div class="k_right">
-                            <a href="/html/detail.html">
-                                <img src="/images/picture-bottom-right01.jpg">
-                            </a>
-                            <a href="/html/detail.html">
-                                <img src="/images/picture-bottom-right02.jpg" style="margin-top:26px;">
-                            </a>
-                        </div> -->
+                <div class="kuai_pic2">
+                    <div class="left2">
+                        <!-- 模板引擎 -->
+                        <script type="text/html" id="prod_tempTwo">
+                            {{each products prod}}
+                                <div class="k_left">
+                                    <a href="/html/detail.html">
+                                        <img src="{{prod.img}}" class="img-responsive">
+                                    </a>
+                                </div>
+                             {{/each}}
+                        </script>
+                    </div>
+
+
+                    <div class="right2">
+                        <!-- 模板引擎 -->
+                        <script type="text/html" id="prod_tempth">
+                             {{each products prod}}
+                                <div class="k_left2">
+                                    <a href="/html/detail.html">
+                                        <img src="{{prod.img}}" class="img-responsive">
+                                    </a>
+                                </div>
+                             {{/each}}
+                         </script>
+                    </div>
+                        
+                	
                     <div class="clear"></div>
                 </div>
             </div>  
