@@ -2,14 +2,12 @@
 	"res_code":0,
 	"res_error":"",
 	"res_body":{
-		"products":[
-			{
-				"id":1,
-				"shangping":{
-					"bit1":{"title":"情迷戴安娜", "price": 169},
-					"bit2":{"title":"明艳雪山", "price": 358}
-				}
-			}
-		]
+		"products":[{
+			"id":1,
+			"title":"情迷戴安娜",
+			"img" : "/images/pic.jpg", 
+			"price": 169,
+			"amount":1
+		}]
 	}
 }

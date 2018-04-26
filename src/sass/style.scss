@@ -16,6 +16,16 @@ img {
 body,html{
 	min-height: 100%;
 }
+button{
+	vertical-align: middle;
+}
+button, select {
+    text-transform: none;
+}
+
+button, input {
+    line-height: normal;
+}
 .mainbody{/* 
 	position: relative; */
 	min-width: 1000px; 

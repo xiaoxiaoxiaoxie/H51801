@@ -17,81 +17,85 @@
 
       <!--     -->
 		<div class="deta_banner"></div>
-		<div class="am_g">
-            
-    		<div class="am-u-sm-12 spxqTitle cust_padding">
-                明艳雪山&amp;情迷戴安娜
-            </div>
-            <div class="am-u-sm-12 cust_padding">
-            	<div class="am-u-sm-12 am-pad-none spxqLfLip">
-                全国同城配送
-                </div> 
-                <div>
-                    <div class="am-u-sm-12 am-pad-none spxqRtPrice am-text-left">
-                		<span>¥ 
-                			<div class="integer_number">169.</div>00 ~ 
-                			<div class="integer_number">358.</div>00
-                		</span>
-                	</div> 
-                	<div class="am-u-sm-6 am-pad-none am-u-end spxqLfLip" style="margin-bottom: 18px;">
-                        运费：免运费
-                    </div>
-                </div> 
-            </div>
-            <div class="fenge"></div>
-    		<div class="product_feature">
-    			<div class="pack1">极速达<div class="pack2"></div></div>
-           		<div class="desc">该商品为同城配送，最快3小时内可送达</div>
-    		</div>
-            <div class="fenge"></div>
+		<div class="am_g deta_temp">
+         <!-- 模板引擎 -->
+            <script type="text/html" id="art_tempt">
+               {{each products prods}}
+        		<div class="am-u-sm-12 spxqTitle cust_padding">
+                    明艳雪山&amp;情迷戴安娜
+                </div>
+                <div class="am-u-sm-12 cust_padding">
+                	<div class="am-u-sm-12 am-pad-none spxqLfLip">
+                    全国同城配送
+                    </div> 
+                    <div>
+                        <div class="am-u-sm-12 am-pad-none spxqRtPrice am-text-left">
+                    		<span class="money">¥ 
+                    			<div class="integer_number price_prev">{{prods.price}}</div>
+                    		</span>
+                    	</div> 
+                    	<div class="am-u-sm-6 am-pad-none am-u-end spxqLfLip" style="margin-bottom: 18px;">
+                            运费：免运费
+                        </div>
+                    </div> 
+                </div>
+                <div class="fenge"></div>
+        		<div class="product_feature">
+        			<div class="pack1">极速达<div class="pack2"></div></div>
+               		<div class="desc">该商品为同城配送，最快3小时内可送达</div>
+        		</div>
+                <div class="fenge"></div>
 
-            <div class="am-u-sm-12 spxqSelectDiv cust_padding deta_temp" style="position: relative; font-size: 14px;">
-                <div class="deta">
-                <!-- 模板引擎 -->
-                <script type="text/html" id="art_tempt">
-                     {{each products prods}}
+                <div class="am-u-sm-12 spxqSelectDiv cust_padding deta_temp" style="position: relative; font-size: 14px;">
     	        	<div>
-            		<div class="">
             			<div class="am-u-sm-2 am-pad-none am-text-left left" style="margin-top: 12px; white-space: nowrap;">款式
                         </div> 
                         <div class="am-u-sm-10 am-pad-none right">
                         	<div class="am-u-sm-6 am-text-left am-u-end xilie" >
                         		<input type="radio"  name="18537341104Key" id="20003328408Value " value="情迷戴安娜"> 
-                        		<span class="span1">{{prods.shangping.bit1.title}}</span> 
-                        		<div class="pack2"></div>
-                        	</div>
-                    <!-- --><div class="am-u-sm-6 am-text-left am-u-end xilie" >
-                        		<input type="radio"  name="18537341104Key" id="17961480831Value" value="明艳雪山"> <!----> 
-                        		<span class="span2">{{prods.shangping.bit2.title}}</span> 
+                        		<span class="span1">{{prods.title}}</span> 
                         		<div class="pack2"></div>
                         	</div>
                         </div>
-                    </div>
                    </div>
 
                     <div class="clear"></div> 
                     <div class="am-u-sm-12 am-pad-none common" style="color: inherit;">
-            <!-- 数量 --><div class="am-u-sm-2 am-pad-none am-text-left left" style="margin-top: 6px;">数量</div> 
+                        <div class="am-u-sm-2 am-pad-none am-text-left left" style="margin-top: 6px;">数量</div> 
                     	<div class="am-u-sm-10 am-pad-none am-text-left right ">
                     		<div class="am-u-sm-6 am-text-left am-u-end " style="padding-right: 0px;">
                     			<div class="number" style="float: left;">
-                    				<div class="reduce">
-                    					<img src="http://static.iishang.com/customer/images/icons/reduce_inactive.png" style="margin-top: 1px;">
+                    				<div class="reduce" data-id="{{prods.id}}">
+                    					<img src="/images/reduce_inactive.png" style="margin-top: 1px;">
                     				</div> 
-                    				<input type="text" value="{{prods.amount}}" style="margin-left: 20%; width: 60%;"> 
-                    				<div class="plus">
-                    					<img src="http://static.iishang.com/customer/images/icons/plus.png">
+                    				<input type="text" class="amount" value="{{prods.amount}}" style="margin-left: 20%; width: 60%;"> 
+                    				<div class="plus" data-id="{{prods.id}}">
+                    					<img src="/images/plus.png">
                     				</div>
                     			</div>
                     		</div>
                     	</div>
                     </div>
-                  {{/each}}
-              </script>
-            </div>
-           <!--  -->
-            </div>
-                    <!-- <div class="am-u-sm-12 spxqTitle cust_padding">
+                    <span class="id" style="display:none">{{prods.id}}</span>
+                    <img src="{{prods.img}}" style="display: none;">
+                </div>  
+
+                <div class="am-u-sm-12 am-pad-none ctfenge" style="height: 20px; margin-top: 10px;"></div>
+                    <div class="am-u-sm-12 am-pad-none">
+                        <ul class="am-u-sm-12 am-pad-none spxqplTAB">
+                            <li class="am-u-sm-12 am-pad-none am-text-center TABactive">商品详情
+                            <div class="select_div"></div>
+                        </li>
+                    </ul>
+                </div>
+                {{/each}}
+            </script>
+
+    	</div>
+        
+   <!-- 源排版   -->
+
+          <!-- <div class="am-u-sm-12 spxqTitle cust_padding">
                         明艳雪山&amp;情迷戴安娜
                     </div>
                     <div class="am-u-sm-12 cust_padding">
@@ -172,20 +176,6 @@
                             </div>
                         </div>
                     </div> -->
-
-            <div class="am-u-sm-12 am-pad-none ctfenge" style="height: 20px; margin-top: 10px;"></div>
-                <div class="am-u-sm-12 am-pad-none">
-                    <ul class="am-u-sm-12 am-pad-none spxqplTAB">
-                        <li class="am-u-sm-12 am-pad-none am-text-center TABactive">商品详情
-                        <div class="select_div"></div>
-                    </li>
-                </ul>
-            </div>
-		</div>
-        
-   <!--        -->
-
-
 		<div class="am_g">
 			<div class="am-u-sm-12 spxqContDiv" style="border: 0px;">
 				<p>
@@ -242,12 +232,9 @@
                     <div class="am-u-sm-2 am-pad-none am-text-center">
                     	<a>
                     		<div class="am-u-sm-12 am-pad-none car_bg">
-                    			<div style="position: relative; width: 20px; margin: auto;">
-                    				<div class="tip"><!----> <!----> 
-                    					<span>0</span>
-                    				</div>
+                    			<div style="position: relative; width: 20px; margin: auto;">                    				
                     			</div>
-                                购物车
+                                <a href="/html/cart.html" style="color: #666;display: block;">购物车</a>
                             </div>
                         </a>
                     </div> 
@@ -258,11 +245,8 @@
                         立即购买
                     </button>
                 </div>
-            </div> <!---->
+            </div> 
         </div>
-
-
-
 	</div>
 	
 </body>

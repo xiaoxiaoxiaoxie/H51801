@@ -281,7 +281,7 @@ body{
 	    z-index: 1010;
 	    text-align: center;
 	}
-	.userFootBar, .footeNavbar {
+	.userFootBar{
 	    padding-bottom: env(safe-area-inset-bottom) !important;
 	    height: auto !important;
 	    min-height: 45px;
