@@ -1,0 +1,43 @@
+ 服务器: localhost  -   数据库: aishang  -   表 : users "InnoDB free: 4096 kB"
+ 
+-- phpMyAdmin SQL Dump
+-- version 2.11.2.1
+-- http://www.phpmyadmin.net
+--
+-- 主机: localhost
+-- 生成日期: 2018 年 04 月 27 日 04:51
+-- 服务器版本: 5.0.45
+-- PHP 版本: 5.2.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- 数据库: `aishang`
+--
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) NOT NULL auto_increment,
+  `phone` varchar(20) character set utf8 NOT NULL,
+  `password` varchar(20) character set utf8 NOT NULL,
+  `sex` varchar(10) character set utf8 default NULL,
+  `adress` varchar(50) character set utf8 default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- 导出表中的数据 `users`
+--
+
+INSERT INTO `users` (`id`, `phone`, `password`, `sex`, `adress`) VALUES
+(2, '15773484324', '123456', NULL, NULL),
+(3, '15775998975', '123456', NULL, NULL),
+(4, '14759897584', '123456', NULL, NULL),
+(5, '13595655642', '123456', NULL, NULL),
+(6, '14734541646', '123456', NULL, NULL);
+
