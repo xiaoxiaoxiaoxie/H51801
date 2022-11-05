@@ -27,7 +27,7 @@
     "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "npm": "^6.11.3"
   }
 }
